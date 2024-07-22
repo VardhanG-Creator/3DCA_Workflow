@@ -348,7 +348,7 @@
                         <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Clean Up" sap:VirtualizedContainerService.HintSize="608,1321.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <Sequence DisplayName="Clean Up" sap:VirtualizedContainerService.HintSize="608,1506" sap2010:WorkflowViewState.IdRef="Sequence_23">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -356,19 +356,19 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Performing clean up...&quot;]" />
                       <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="546,122" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="Brief.xlsx" />
-                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each File" sap:VirtualizedContainerService.HintSize="546,759.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;Brief&quot;),&quot;*.pdf&quot;)]">
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each File" sap:VirtualizedContainerService.HintSize="546,944" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;Brief&quot;),&quot;*.pdf&quot;)]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:String">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:String" Name="File" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,603.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,788" sap2010:WorkflowViewState.IdRef="Sequence_31">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[Path.GetFileName(File).Contains(in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="450,518.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If Condition="[Path.GetFileName(File).Contains(in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="450,703.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -376,12 +376,13 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,439.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;File Deleted from Brief: &quot;+System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;Brief&quot;, File.ToString())]" />
                                     <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="DeleteFileX_5" Path="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;Brief&quot;, File.ToString())]" />
                                     <ui:Break sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Break_2" />
                                   </Sequence>

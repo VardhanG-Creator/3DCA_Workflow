@@ -315,9 +315,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID30" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231.33333333333334,200" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID30" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="1253.3333333333333,3982" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="1206.6666666666667,3410.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="1206.6666666666667,3450.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -344,7 +344,7 @@
                         </Assign.Value>
                       </Assign>
                       <ui:BuildDataTable DataTable="[dt_SummaryResultData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1106,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Exception_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Exception&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                      <TryCatch DisplayName="Try Catch - Process" sap:VirtualizedContainerService.HintSize="1106,2721.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                      <TryCatch DisplayName="Try Catch - Process" sap:VirtualizedContainerService.HintSize="1106,2761.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                         <TryCatch.Variables>
                           <Variable x:TypeArguments="x:String" Name="str_OriginalAccmsAttorneyInfo" />
                           <Variable x:TypeArguments="x:String" Name="str_extractedPhoneNumber" />
@@ -524,7 +524,7 @@
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="630.6666666666666,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_101">
+                                    <Assign sap:VirtualizedContainerService.HintSize="838.6666666666666,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_101">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Int32">[int_accmsCounter]</OutArgument>
                                       </Assign.To>
@@ -532,16 +532,16 @@
                                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ACCMS application" Condition="[bool_accmsPageOpen&lt;&gt;True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="630.6666666666666,124.66666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ACCMS application" Condition="[bool_accmsPageOpen&lt;&gt;True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="838.6666666666666,937.3333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                                       <ui:InterruptibleDoWhile.Body>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="614,1350" sap2010:WorkflowViewState.IdRef="Sequence_432">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="596.6666666666666,750.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_432">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="552,1265.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,666" sap2010:WorkflowViewState.IdRef="TryCatch_15">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -549,10 +549,10 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <TryCatch.Try>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="416,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_431">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="496,380.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_431">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
@@ -984,10 +984,10 @@
                                               </Sequence>
                                             </TryCatch.Try>
                                             <TryCatch.Catches>
-                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518,1047.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_17">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
@@ -1049,7 +1049,7 @@
                                                   </Sequence>
                                                 </ActivityAction>
                                               </Catch>
-                                              <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="518,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                                              <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="500.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_18">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1120,13 +1120,13 @@
                                       </ui:InterruptibleDoWhile.Body>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InterruptibleDoWhile>
-                                    <Sequence DisplayName="Match Information" sap:VirtualizedContainerService.HintSize="630.6666666666666,1948.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_146">
+                                    <Sequence DisplayName="Match Information" sap:VirtualizedContainerService.HintSize="838.6666666666666,1948.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_146">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2181,7 +2181,7 @@
                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence DisplayName="OnBase Lanuch in Process Transaction" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_966">
+                                            <Sequence DisplayName="OnBase Lanuch in Process Transaction" sap:VirtualizedContainerService.HintSize="766,124.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_966">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2198,7 +2198,7 @@
                                                 </ui:InvokeWorkflowFile.Arguments>
                                               </ui:InvokeWorkflowFile>
                                             </Sequence>
-                                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Filter with Case Number" AttachMode="ByInstance" DisplayName="Use Application: OnBase (OnBase-JCC-Prod-SSO)" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_72" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
+                                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Filter with Case Number" AttachMode="ByInstance" DisplayName="Use Application: OnBase (OnBase-JCC-Prod-SSO)" sap:VirtualizedContainerService.HintSize="766,4298" sap2010:WorkflowViewState.IdRef="NApplicationCard_72" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
                                               <uix:NApplicationCard.Body>
                                                 <ActivityAction x:TypeArguments="x:Object">
                                                   <ActivityAction.Argument>
@@ -2606,12 +2606,12 @@
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NApplicationCard>
-                                            <TryCatch sap2010:Annotation.AnnotationText="Code Filing" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_20">
+                                            <TryCatch sap2010:Annotation.AnnotationText="Code Filing" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="766,124.66666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_20">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4152,7 +4152,7 @@
                                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_23" TaskCatalog="[taskCatalog]" TaskOutput="[checkStampTask]" TaskPriority="[TaskPriority.High]" TaskTitle="[&quot;MANUAL &quot;+CurrentCaseNumber+&quot;: Check FILED Stamp Date &quot;]">
+                                                <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_23" TaskCatalog="[taskCatalog]" TaskOutput="[checkStampTask]" TaskPriority="[TaskPriority.High]" TaskTitle="[&quot;MANUAL &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;: Check FILED Stamp Date &quot;]">
                                                   <upae:CreateExternalTask.TaskData>
                                                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                   </upae:CreateExternalTask.TaskData>
@@ -4206,21 +4206,21 @@
                                                           <av:PointCollection x:Key="ConnectorLocation">360,2215 390,2215 390,2209.9999999999995 410,2209.9999999999995</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence sap2010:Annotation.AnnotationText="Submit Stamp Date and Complete Filing for the current document" DisplayName="Onbase filing" sap:VirtualizedContainerService.HintSize="670,2528.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_531">
+                                                      <Sequence sap2010:Annotation.AnnotationText="Submit Stamp Date and Complete Filing for the current document" DisplayName="Onbase filing" sap:VirtualizedContainerService.HintSize="200,146.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_531">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Sequence DisplayName="Accept filing after the Stamp date" sap:VirtualizedContainerService.HintSize="608,2168.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_859">
+                                                        <Sequence DisplayName="Accept filing after the Stamp date" sap:VirtualizedContainerService.HintSize="512,609.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_859">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Sequence DisplayName="OnBase Lanuch in Process Transaction" sap:VirtualizedContainerService.HintSize="546,124.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_967">
+                                                          <Sequence DisplayName="OnBase Lanuch in Process Transaction" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_967">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4237,7 +4237,7 @@
                                                               </ui:InvokeWorkflowFile.Arguments>
                                                             </ui:InvokeWorkflowFile>
                                                           </Sequence>
-                                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Filtering the Document" AttachMode="ByInstance" DisplayName="Use Application: Filtering Doc after samp date Manual check" sap:VirtualizedContainerService.HintSize="546,1684" sap2010:WorkflowViewState.IdRef="NApplicationCard_77" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
+                                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Filtering the Document" AttachMode="ByInstance" DisplayName="Use Application: Filtering Doc after samp date Manual check" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_77" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
                                                             <uix:NApplicationCard.Body>
                                                               <ActivityAction x:TypeArguments="x:Object">
                                                                 <ActivityAction.Argument>
@@ -4645,12 +4645,12 @@
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                           </uix:NApplicationCard>
-                                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Accept filing" AttachMode="ByInstance" DisplayName="Use Application: AcceptFiling After Manual Stamp Date Manual Check" sap:VirtualizedContainerService.HintSize="546,124.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_78" ScopeGuid="d659fb82-7059-4dd1-9c82-8d46d9870b99" Version="V2">
+                                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Accept filing" AttachMode="ByInstance" DisplayName="Use Application: AcceptFiling After Manual Stamp Date Manual Check" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_78" ScopeGuid="d659fb82-7059-4dd1-9c82-8d46d9870b99" Version="V2">
                                                             <uix:NApplicationCard.Body>
                                                               <ActivityAction x:TypeArguments="x:Object">
                                                                 <ActivityAction.Argument>
@@ -4849,7 +4849,7 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                           </uix:NApplicationCard>
-                                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Submit Accept Filing" AttachMode="ByInstance" DisplayName="Use Application: AcceptFiling After Manual Stamp Manual Date Check and Submit" sap:VirtualizedContainerService.HintSize="546,107.33333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_79" ScopeGuid="d659fb82-7059-4dd1-9c82-8d46d9870b99" Version="V2">
+                                                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Submit Accept Filing" AttachMode="ByInstance" DisplayName="Use Application: AcceptFiling After Manual Stamp Manual Date Check and Submit" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_79" ScopeGuid="d659fb82-7059-4dd1-9c82-8d46d9870b99" Version="V2">
                                                             <uix:NApplicationCard.Body>
                                                               <ActivityAction x:TypeArguments="x:Object">
                                                                 <ActivityAction.Argument>
@@ -5038,7 +5038,7 @@
                                                             </sap:WorkflowViewStateService.ViewState>
                                                           </uix:NApplicationCard>
                                                         </Sequence>
-                                                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="512,241.33333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_31">
+                                                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="512,370" sap2010:WorkflowViewState.IdRef="TryCatch_31">
                                                           <TryCatch.Try>
                                                             <uix:NApplicationCard sap2010:Annotation.AnnotationText="Complete filing" AttachMode="ByInstance" DisplayName="Use Application: OnBase (Test-JCC-IDP)" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_85" ScopeGuid="d659fb82-7059-4dd1-9c82-8d46d9870b99" Version="V2">
                                                               <uix:NApplicationCard.Body>
@@ -5161,7 +5161,7 @@
                                                             </uix:NApplicationCard>
                                                           </TryCatch.Try>
                                                           <TryCatch.Catches>
-                                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_43">
+                                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_43">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5175,7 +5175,7 @@
                                                                 <Throw Exception="[New SystemException(&quot;Only Complete filing is not done Since Onbase was not responding&quot;)]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_27" />
                                                               </ActivityAction>
                                                             </Catch>
-                                                            <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="400,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_44">
+                                                            <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_44">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5215,7 +5215,7 @@
                                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_38" TaskCatalog="[taskCatalog]" TaskOutput="[checkBotCompleteTask]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.Medium]" TaskTitle="[&quot;MANUAL &quot;+CurrentCaseNumber+&quot;: Complete docket entry in ACCMS&quot;]">
+                                                            <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_38" TaskCatalog="[taskCatalog]" TaskOutput="[checkBotCompleteTask]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.Medium]" TaskTitle="[&quot;MANUAL &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;: Complete docket entry in ACCMS&quot;]">
                                                               <upae:CreateExternalTask.TaskData>
                                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                               </upae:CreateExternalTask.TaskData>
@@ -5292,7 +5292,7 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_117" Level="Info" Message="[&quot;Document has been Rejected in the Manual Validation as the Stamp Date Date is Miss Matched&quot;]" />
-                                                                    <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Manual validation for Docket is not meeting the requirements. CaseNumber: &quot;+CurrentCaseNumber)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                                                                    <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Manual validation for Docket is not meeting the requirements. CaseNumber: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_5" />
                                                                   </Sequence>
                                                                 </FlowStep>
                                                               </FlowDecision.False>
@@ -5317,7 +5317,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_181" Level="Info" Message="[&quot;Document has been Rejected in the Manual Validation as the Stamp Date Date is Miss Matched&quot;]" />
-                                                        <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Manual validation for stamp date did not match. CaseNumber: &quot;+CurrentCaseNumber)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_14" />
+                                                        <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Manual validation for stamp date did not match. CaseNumber: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_14" />
                                                       </Sequence>
                                                     </FlowStep>
                                                   </FlowDecision.False>
@@ -5343,15 +5343,15 @@
                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="LogMessage_112" Level="Info" Message="[&quot;Miss Matched Data with the ACCMS info: &quot;+MissMatchData]">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_112" Level="Info" Message="[&quot;Miss Matched Data with the ACCMS info: &quot;+MissMatchData]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:LogMessage>
-                                            <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_28" TaskCatalog="[taskCatalog]" TaskOutput="[checkMissMatchData]" TaskPriority="[TaskPriority.High]" TaskTitle="[&quot;Document Processing Failure: Document info did Not match With info In ACCMS &quot;+&quot;(&quot;+MissMatchData+&quot;). Case Number: &quot;+CurrentCaseNumber]">
+                                            <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_28" TaskCatalog="[taskCatalog]" TaskOutput="[checkMissMatchData]" TaskPriority="[TaskPriority.High]" TaskTitle="[&quot;Document Processing Failure: Document info did Not match With info In ACCMS &quot;+&quot;(&quot;+MissMatchData+&quot;). Case Number: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString]">
                                               <upae:CreateExternalTask.TaskData>
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </upae:CreateExternalTask.TaskData>
@@ -5362,11 +5362,11 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </upae:CreateExternalTask>
-                                            <upae:WaitForExternalTaskAndResume StatusMessage="{x:Null}" TaskAction="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait For External Task and Resume" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="WaitForExternalTaskAndResume_4" TaskInput="[checkMissMatchData]" TaskOutput="[MissMatchTaskObjectOutput]">
+                                            <upae:WaitForExternalTaskAndResume StatusMessage="{x:Null}" TaskAction="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait For External Task and Resume" sap:VirtualizedContainerService.HintSize="434,184.66666666666666" sap2010:WorkflowViewState.IdRef="WaitForExternalTaskAndResume_4" TaskInput="[checkMissMatchData]" TaskOutput="[MissMatchTaskObjectOutput]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </upae:WaitForExternalTaskAndResume>
@@ -5522,7 +5522,7 @@
                                                   <InArgument x:TypeArguments="x:String">3DCA-Prod</InArgument>
                                                 </Assign.Value>
                                               </Assign>
-                                              <p3:CreateDocumentValidationAction FieldsValidationConfidence="{x:Null}" FolderPath="{x:Null}" TimeoutMs="{x:Null}" ActionCatalog="[actionCatalog]" ActionOutput="[validationActionObject]" ActionPriority="Medium" ActionTitle="[CurrentCaseNumber+&quot;: Validate Extracted Fields from Document&quot;]" AutomaticExtractionResults="[extractionResult]" BucketFolderPath="[bucketPath]" BucketName="[bucketName]" DisplayName="Create Document Validation Action" DocumentObjectModel="[dom]" DocumentPath="[str_currentPdfFile]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,404.6666666666667" sap2010:WorkflowViewState.IdRef="CreateDocumentValidationAction_1" RetryOnFailure="True" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]">
+                                              <p3:CreateDocumentValidationAction FieldsValidationConfidence="{x:Null}" FolderPath="{x:Null}" TimeoutMs="{x:Null}" ActionCatalog="[actionCatalog]" ActionOutput="[validationActionObject]" ActionPriority="Medium" ActionTitle="[TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;: Validate Extracted Fields from Document&quot;]" AutomaticExtractionResults="[extractionResult]" BucketFolderPath="[bucketPath]" BucketName="[bucketName]" DisplayName="Create Document Validation Action" DocumentObjectModel="[dom]" DocumentPath="[str_currentPdfFile]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,404.6666666666667" sap2010:WorkflowViewState.IdRef="CreateDocumentValidationAction_1" RetryOnFailure="True" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -5711,8 +5711,8 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_141" Level="Info" Message="[&quot;Document Processing Failure: Document cannot be classified due to missing information. Case Number: &quot;+CurrentCaseNumber]" />
-                                                <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Document cannot be classified due to missing information. Case Number: &quot;+CurrentCaseNumber)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_141" Level="Info" Message="[&quot;Document Processing Failure: Document cannot be classified due to missing information. Case Number: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString]" />
+                                                <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Document cannot be processed due to incomplete data being submitted during the validation action. Case Number: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_7" />
                                               </Sequence>
                                             </FlowStep>
                                           </FlowDecision.False>
@@ -5743,7 +5743,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Document could not be classified for Case Number: &quot;+CurrentCaseNumber)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                    <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Document could not be classified or not a 'APPELLANT’S OPENING BRIEF' Doc for Case Number: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3" />
                                   </Sequence>
                                 </FlowStep>
                               </FlowDecision.False>
@@ -5758,7 +5758,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">469.33333333333337,367.00000000000006 469.33333333333337,407</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Document Validation" sap:VirtualizedContainerService.HintSize="496,790" sap2010:WorkflowViewState.IdRef="Sequence_977">
+                              <Sequence DisplayName="Document Validation" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_977">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="str_excludedText" />
                                 </Sequence.Variables>
@@ -5847,7 +5847,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_2" TaskCatalog="[taskCatalog]" TaskOutput="[externalTask]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.High]" TaskTitle="[&quot;MANUAL &quot;+CurrentCaseNumber+&quot;: Check Format (Font Size/Name, Text/Line Spacing, Pagination/Page Counter Verification, Verify Signature, Word Count, Numeration (Lines), Alignment (Quotations), Footnote Checks)&quot;]">
+                                    <upae:CreateExternalTask ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Create External Task" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,343.3333333333333" sap2010:WorkflowViewState.IdRef="CreateExternalTask_2" TaskCatalog="[taskCatalog]" TaskOutput="[externalTask]" TaskPriority="[UiPath.Persistence.Activities.Model.Task.TaskPriority.High]" TaskTitle="[&quot;MANUAL &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;: Check Format (Font Size/Name, Text/Line Spacing, Pagination/Page Counter Verification, Verify Signature, Word Count, Numeration (Lines), Alignment (Quotations), Footnote Checks)&quot;]">
                                       <upae:CreateExternalTask.TaskData>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </upae:CreateExternalTask.TaskData>
@@ -5906,8 +5906,8 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Document has been Rejected in the Manual Validation as it is not meeting the Requirements&quot;]" />
-                                            <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Rejected during manual validation by clerk as it did not meet the set requirements. Case Number: &quot;+ CurrentCaseNumber)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Document Processing Failure: Rejected during manual validation by clerk as it did not meet the set requirements. Case Number: &quot;+ TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString]" />
+                                            <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Rejected during manual validation by clerk as it did not meet the set requirements. Case Number: &quot;+ TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
                                           </Sequence>
                                         </FlowStep>
                                       </FlowDecision.True>
@@ -5927,7 +5927,7 @@
                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each File" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[Directory.GetFiles(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;Brief&quot;),&quot;*.pdf&quot;)]">
+                                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each File" sap:VirtualizedContainerService.HintSize="626,762.6666666666666" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[Directory.GetFiles(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;Brief&quot;),&quot;*.pdf&quot;)]">
                                               <ui:ForEach.Body>
                                                 <ActivityAction x:TypeArguments="x:String">
                                                   <ActivityAction.Argument>
@@ -5979,12 +5979,12 @@
                                               </ui:ForEach.Body>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:ForEach>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="3DCA_DocumentUnderstandingClassification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="3DCA_DocumentUnderstandingClassification.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="3DCA_DocumentUnderstandingClassification.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="626,218" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="3DCA_DocumentUnderstandingClassification.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <OutArgument x:TypeArguments="s:String[]" x:Key="files">[files]</OutArgument>
                                                 <OutArgument x:TypeArguments="p1:DocumentTaxonomy" x:Key="taxonomy">[taxonomy]</OutArgument>
@@ -6001,7 +6001,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:InvokeWorkflowFile>
-                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,76.66666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="626,76.66666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_14">
                                               <ui:CommentOut.Body>
                                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,161.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_991">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -6076,7 +6076,7 @@
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">370,133</av:Point>
                                   <av:Size x:Key="ShapeSize">200,115.33333333333333</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">470,248.33333333333331 470,278.33333333333337 469.33333333333337,278.33333333333337 469.33333333333337,282.33333333333337</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">470,248.33333333333331 470,278.3333333333333 469.33333333333337,278.3333333333333 469.33333333333337,282.33333333333337</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <Sequence sap2010:Annotation.AnnotationText="BOT Downloads the Brief Doc" DisplayName="Download Doc" sap:VirtualizedContainerService.HintSize="200,115.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_194">
@@ -6087,7 +6087,7 @@
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[str_NoLogin=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="If_173">
+                                <If Condition="[str_NoLogin=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="704,94" sap2010:WorkflowViewState.IdRef="If_173">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -6130,7 +6130,7 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_223">
+                                <Assign sap:VirtualizedContainerService.HintSize="704,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_223">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[str_NoLogin]</OutArgument>
                                   </Assign.To>
@@ -6138,7 +6138,7 @@
                                     <InArgument x:TypeArguments="x:String">Yes</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <uix:NApplicationCard sap2010:Annotation.AnnotationText="BOT downloads the brief documents" AttachMode="ByInstance" DisplayName="Use Application: OnBase (OnBase-JCC-Prod-SSO)" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="NApplicationCard_84" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
+                                <uix:NApplicationCard sap2010:Annotation.AnnotationText="BOT downloads the brief documents" AttachMode="ByInstance" DisplayName="Use Application: OnBase (OnBase-JCC-Prod-SSO)" sap:VirtualizedContainerService.HintSize="704,2066.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_84" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -6911,7 +6911,7 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -7400,7 +7400,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <State x:Name="__ReferenceID31" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="581.3333333333334,1418.6666666666667" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID31" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,108" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="534.6666666666666,988" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
