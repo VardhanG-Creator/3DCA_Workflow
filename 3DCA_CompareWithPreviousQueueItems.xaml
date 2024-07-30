@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,2172.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,4157.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_3DCA_CheckPreviousQueueItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,16 +114,17 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_3DCA_CheckPreviousQueueItems" sap:VirtualizedContainerService.HintSize="654,2108" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_3DCA_CheckPreviousQueueItems" sap:VirtualizedContainerService.HintSize="942,4092.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_match" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="list_queue" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;3DCA_CompareWithPreviousQueueItems Workflow is Started&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="880,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;3DCA_CompareWithPreviousQueueItems Workflow is Started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -131,20 +132,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Comparing last 4 Days Queue items with Current Items to Avoid duplication.&quot;]" />
-    <ui:BuildDataTable DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Build Data Table out_dt_finalBulkQueueItems" sap:VirtualizedContainerService.HintSize="592,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Sequence DisplayName="Checking for Queue statuses - Inprogress, Successful" sap:VirtualizedContainerService.HintSize="592,1383.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="list_queue" />
-      </Sequence.Variables>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="880,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Comparing last 4 Days Queue items with Current Items to Avoid duplication.&quot;]" />
+    <ui:BuildDataTable DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Build Data Table out_dt_finalBulkQueueItems" sap:VirtualizedContainerService.HintSize="880,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Sequence DisplayName="Checking for Queue statuses - Inprogress, Successful" sap:VirtualizedContainerService.HintSize="880,3368" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetQueueItems Duration="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" From="[Now.AddDays(-4)]" sap:VirtualizedContainerService.HintSize="530,184.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItems_6" QueueItemStates="InProgress, Failed, Successful" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[list_queue]" />
-      <If Condition="[list_queue.Count&lt;&gt;0]" sap:VirtualizedContainerService.HintSize="530,1070.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+      <ui:GetQueueItems Duration="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" From="[Now.AddDays(-7)]" sap:VirtualizedContainerService.HintSize="818,184.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItems_6" QueueItemStates="InProgress, Failed, Successful" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[list_queue]" />
+      <If Condition="[list_queue.Count&lt;&gt;0]" sap:VirtualizedContainerService.HintSize="818,3055.3333333333335" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -152,14 +150,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,530.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="784,2515.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[list_queue.Count.ToString+&quot; Transaction Items available in the 3DCA-Prod Queue in past 24 hours&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="722,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[list_queue.Count.ToString+&quot; Transaction Items available in the 3DCA-Prod Queue in past 24 hours&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -167,31 +165,31 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_BulkQueueItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_BulkQueueItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2078.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,741.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,1870.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each currentQueueItem" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_queue]">
+                    <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each currentQueueItem" sap:VirtualizedContainerService.HintSize="626,1038.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_queue]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="ui:QueueItem">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:QueueItem" Name="currentQueueItem" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,791.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,882.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[CurrentRow(&quot;Case Number&quot;).ToString=currentQueueItem.SpecificContent(&quot;Case Number&quot;).ToString]" sap:VirtualizedContainerService.HintSize="530,706.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If Condition="[CurrentRow(&quot;Case Number&quot;).ToString=currentQueueItem.SpecificContent(&quot;Case Number&quot;).ToString]" sap:VirtualizedContainerService.HintSize="530,798" sap2010:WorkflowViewState.IdRef="If_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,17 +211,25 @@
                                       <InArgument x:TypeArguments="x:String">Yes</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_27" Message="[&quot;Case Number &quot; +CurrentRow(&quot;Case Number&quot;).ToString+&quot;was already processed. Not Adding to the Queue.&quot;]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;Case Number &quot; +CurrentRow(&quot;Case Number&quot;).ToString+&quot; was already processed. Not Adding to the Queue.&quot;]" />
                                   <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_1" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[str_match]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">No</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
                                 </Sequence>
                               </If.Else>
                             </If>
@@ -232,12 +238,12 @@
                       </ui:ForEach.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEach>
-                    <If Condition="[str_match=&quot;No&quot;]" sap:VirtualizedContainerService.HintSize="450,562.6666666666666" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[str_match=&quot;No&quot;]" sap:VirtualizedContainerService.HintSize="626,747.3333333333334" sap2010:WorkflowViewState.IdRef="If_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,12 +251,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,298.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,483.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Case Number &quot; +CurrentRow(&quot;Case Number&quot;).ToString+&quot; was not processed. Adding to the Final Data table&quot;]" />
                           <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;Case Number&quot;).ToString,in_DocType.ToString}]" DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,214" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
                         </Sequence>
                       </If.Then>
@@ -269,12 +276,12 @@
               </ui:ForEachRow.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Total &quot;+out_dt_finalBulkQueueItems.RowCount.ToString+&quot; New Items Found&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="722,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Total &quot;+out_dt_finalBulkQueueItems.RowCount.ToString+&quot; New Items Found&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -299,7 +306,7 @@
                 <InArgument x:TypeArguments="sd:DataTable">[in_dt_BulkQueueItems]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;No Previous Inprogress and Successful Queue items available. Adding All Extracted Case Numbers (Total Count: &quot;+out_dt_finalBulkQueueItems.RowCount.ToString+&quot;) to the Queue.&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;No Previous Inprogress, Failed and Successful Queue items available. Adding All Extracted Case Numbers (Total Count: &quot;+out_dt_finalBulkQueueItems.RowCount.ToString+&quot;) to the Queue.&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,7 +318,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;3DCA_CompareWithPreviousQueueItems Workflow is Completed&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="880,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;3DCA_CompareWithPreviousQueueItems Workflow is Completed&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

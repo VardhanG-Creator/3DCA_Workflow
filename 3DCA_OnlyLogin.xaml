@@ -261,7 +261,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Checking if OnBase is already opened...&quot;]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Started Working Flow '3DCA_OnlyLogin'. Checking if OnBase is already opened...&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -574,7 +574,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">260.6666666666667,467.8666666666667 260.6666666666667,497.8666666666667 460,497.8666666666667 460,526.6666666666666</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Use Application: Login" sap:VirtualizedContainerService.HintSize="646.6666666666666,1383.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_402">
+                    <Sequence DisplayName="Use Application: Login" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_402">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -973,7 +973,7 @@
                                 <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Launching Application" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_443">
+                            <Sequence DisplayName="Launching Application" sap:VirtualizedContainerService.HintSize="704,1996" sap2010:WorkflowViewState.IdRef="Sequence_443">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1076,7 +1076,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </uix:NTypeInto>
-                                              <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayAfter="1" DisplayName="Type Into 'Status'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="NTypeInto_56" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="RECEIVED[k(Enter)]" Version="V3">
+                                              <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayAfter="1" DisplayName="Type Into 'Status'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="NTypeInto_59" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="RECEIVED[k(Enter)]" Version="V3">
                                                 <uix:NTypeInto.Target>
                                                   <uix:TargetAnchorable DesignTimeRectangle="1094, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='8' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="287af32a-d944-43cc-9a30-1e1695be09bf" ImageBase64="" InformativeScreenshot="58dca6d5aaa463fe0a5967e2d2cab105.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
                                                     <uix:TargetAnchorable.Anchors>
@@ -1164,7 +1164,7 @@
                                                   </If.Else>
                                                 </If>
                                               </Sequence>
-                                              <If Condition="[DocType.ToLower.ToString.Trim=&quot;appellant's opening brief&quot;]" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="If_136">
+                                              <If Condition="[DocType.ToLower.ToString.Trim=&quot;appellant's opening brief&quot;]" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="If_139">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1172,13 +1172,13 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <If.Then>
-                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,368" sap2010:WorkflowViewState.IdRef="Sequence_1017">
+                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,462" sap2010:WorkflowViewState.IdRef="Sequence_1017">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayBetweenKeys="0" DisplayName="Type Into 'TrueFiling Document Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,283.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_50" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="BRIEF - APPELLANT'S OPENING BRIEF[k(Enter)]" Version="V3">
+                                                    <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayBetweenKeys="0" DisplayName="Type Into 'TrueFiling Document Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,300.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_50" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="BRIEF - APPELLANT'S OPENING BRIEF[k(Enter)]" Version="V3">
                                                       <uix:NTypeInto.Target>
                                                         <uix:TargetAnchorable DesignTimeRectangle="1538, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='11' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="484a6a2d-d236-444a-a4d8-864fefadc35c" InformativeScreenshot="e39f0c4cbfaff2134be5b659948bb29c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
                                                           <uix:TargetAnchorable.Anchors>
@@ -1205,18 +1205,26 @@
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                     </uix:NTypeInto>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_302" Level="Info" Message="[&quot;Added True filing Filter in Onbase&quot;]">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:LogMessage>
                                                   </Sequence>
                                                 </If.Then>
                                                 <If.Else>
-                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,842" sap2010:WorkflowViewState.IdRef="Sequence_1020">
+                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,936" sap2010:WorkflowViewState.IdRef="Sequence_1020">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <If Condition="[DocType.ToLower.ToString.Trim=&quot;appellant opening brief&quot;]" sap:VirtualizedContainerService.HintSize="530,757.3333333333334" sap2010:WorkflowViewState.IdRef="If_129">
+                                                    <If Condition="[DocType.ToLower.ToString.Trim=&quot;appellant opening brief&quot;]" sap:VirtualizedContainerService.HintSize="530,851.3333333333334" sap2010:WorkflowViewState.IdRef="If_129">
                                                       <If.Then>
-                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,493.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1018">
+                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,587.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1018">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1230,7 +1238,7 @@
                                                               <InArgument x:TypeArguments="x:String">appellant's opening brief</InArgument>
                                                             </Assign.Value>
                                                           </Assign>
-                                                          <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayBetweenKeys="0" DisplayName="Type Into 'TrueFiling Document Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,283.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_51" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="BRIEF - APPELLANT'S OPENING BRIEF[k(Enter)]" Version="V3">
+                                                          <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayBetweenKeys="0" DisplayName="Type Into 'TrueFiling Document Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,300.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_51" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="BRIEF - APPELLANT'S OPENING BRIEF[k(Enter)]" Version="V3">
                                                             <uix:NTypeInto.Target>
                                                               <uix:TargetAnchorable DesignTimeRectangle="1538, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='11' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="484a6a2d-d236-444a-a4d8-864fefadc35c" InformativeScreenshot="e39f0c4cbfaff2134be5b659948bb29c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1257,6 +1265,14 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                           </uix:NTypeInto>
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,76.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_303" Level="Info" Message="[&quot;Added True filing Filter in Onbase&quot;]">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </ui:LogMessage>
                                                         </Sequence>
                                                       </If.Then>
                                                       <If.Else>
