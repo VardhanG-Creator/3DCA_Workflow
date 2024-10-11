@@ -1,0 +1,13 @@
+﻿{
+  "Name": "OnBase (OnBase-JCC-Prod-SSO)",
+  "Type": "Screen",
+  "Id": "m2BMvN3tuEO_ik0YV-pUlQ",
+  "Reference": "kV0y4Zv4QUuzQijVmjOubQ/m2BMvN3tuEO_ik0YV-pUlQ",
+  "ParentRef": "kV0y4Zv4QUuzQijVmjOubQ/gaGIYCDeYkaYPr8M_WMXvA",
+  "Created": "2024-10-10T23:37:13.8292572Z",
+  "Updated": "2024-10-10T23:37:13.8292572Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

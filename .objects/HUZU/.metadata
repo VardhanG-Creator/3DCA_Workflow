@@ -1,0 +1,12 @@
+﻿{
+  "Name": "OnBase (OnBase-JCC-Prod-SSO)",
+  "Type": "App",
+  "Id": "HUZUZPajJ06Vybs0XF2RIg",
+  "Reference": "kV0y4Zv4QUuzQijVmjOubQ/HUZUZPajJ06Vybs0XF2RIg",
+  "Created": "2024-10-10T23:37:13.6379213Z",
+  "Updated": "2024-10-10T23:37:13.6379213Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
