@@ -15,7 +15,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1793.3333333333333,1122.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1174.6666666666667,1122.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="136">
@@ -256,7 +256,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">460,341.1666666666667 460,381.5333333333333</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Get OnBase File Path" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_232">
+            <Sequence DisplayName="Get OnBase File Path" sap:VirtualizedContainerService.HintSize="654,2001.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_232">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -390,7 +390,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <Delay Duration="00:00:59" sap:VirtualizedContainerService.HintSize="530,132" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="530,132" sap2010:WorkflowViewState.IdRef="Delay_2" />
                 <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="530,76.66666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -974,7 +974,7 @@
                                 <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Launching Application" sap:VirtualizedContainerService.HintSize="704,2409.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_443">
+                            <Sequence DisplayName="Launching Application" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_443">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>

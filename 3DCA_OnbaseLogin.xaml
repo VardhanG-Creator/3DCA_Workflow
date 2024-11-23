@@ -14,7 +14,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1150,1121.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,1121.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="136">
@@ -312,7 +312,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">460,341.1666666666667 460,381.5333333333333</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Get OnBase File Path" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_232">
+            <Sequence DisplayName="Get OnBase File Path" sap:VirtualizedContainerService.HintSize="1270.6666666666667,1830.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_232">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sco:Collection(sd1:Process)" Name="processes" />
                 <Variable x:TypeArguments="ss:SecureString" Name="secure_password" />
@@ -430,7 +430,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <Delay Duration="00:00:59" sap:VirtualizedContainerService.HintSize="1146.6666666666667,132" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="1146.6666666666667,132" sap2010:WorkflowViewState.IdRef="Delay_3" />
                 <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1146.6666666666667,1096.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                   <TryCatch.Try>
                     <Sequence sap:VirtualizedContainerService.HintSize="1108,811.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1065">
@@ -609,7 +609,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">260.6666666666667,467.8666666666667 260.6666666666667,497.8666666666667 460.00000000000006,497.8666666666667 460.00000000000006,536.6666666666667</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Use Application: Login" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_402">
+                    <Sequence DisplayName="Use Application: Login" sap:VirtualizedContainerService.HintSize="708.6666666666666,1346" sap2010:WorkflowViewState.IdRef="Sequence_402">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -622,7 +622,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646.6666666666666,2342" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646.6666666666666,1073.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -630,13 +630,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
-                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: OnBase" sap:VirtualizedContainerService.HintSize="608,2056.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_60" OpenMode="Never" ScopeGuid="5d6be876-045b-4edf-96b4-95c9a01f0d0b" Version="V2" WindowResize="Maximize">
+                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: OnBase" sap:VirtualizedContainerService.HintSize="546,788" sap2010:WorkflowViewState.IdRef="NApplicationCard_60" OpenMode="Never" ScopeGuid="5d6be876-045b-4edf-96b4-95c9a01f0d0b" Version="V2" WindowResize="Maximize">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,1759.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_403">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,490.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_403">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Boolean" Name="bool_PageLoad" />
                                   </Sequence.Variables>
@@ -646,14 +646,14 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Locked Popup" sap:VirtualizedContainerService.HintSize="512,1393.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_870">
+                                  <Sequence DisplayName="Locked Popup" sap:VirtualizedContainerService.HintSize="450,124.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_870">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="bool_LockedPopup" />
                                       <Variable x:TypeArguments="x:Boolean" Name="bool_yesExists" />
                                     </Sequence.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
@@ -743,7 +743,7 @@
                                       </If.Else>
                                     </If>
                                   </Sequence>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'graphic image'" sap:VirtualizedContainerService.HintSize="512,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_204" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5d6be876-045b-4edf-96b4-95c9a01f0d0b" Version="V3">
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'graphic image'" sap:VirtualizedContainerService.HintSize="450,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_204" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5d6be876-045b-4edf-96b4-95c9a01f0d0b" Version="V3">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="1252, 92, 48, 48" DesignTimeScaleFactor="1.5" ElementType="Icon" FullSelectorArgument="&lt;ctrl automationid='canvasRibbonToolbar' /&gt;&lt;ctrl automationid='HomeRibbon' /&gt;&lt;ctrl automationid='workflowRibbonGroup' /&gt;&lt;ctrl automationid='workflowButtonTool' /&gt;&lt;ctrl automationid='image' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='canvasRibbonToolbar' /&gt;&lt;ctrl automationid='HomeRibbon' /&gt;&lt;ctrl automationid='workflowRibbonGroup' /&gt;&lt;ctrl automationid='workflowButtonTool' /&gt;&lt;ctrl automationid='image' role='graphic' /&gt;" Guid="f7b8eda6-4262-4e1f-9bca-c1b446a77bef" InformativeScreenshot="9c6426918819b00ca2e11f72a0959f9a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' aaname='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Visible" WaitForReadyArgument="Complete" />
                                     </uix:NClick.Target>
@@ -754,7 +754,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NClick>
-                                  <uix:NCheckState DisplayName="Check App State Page load popup'" sap:VirtualizedContainerService.HintSize="512,79.33333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_51" ScopeIdentifier="5d6be876-045b-4edf-96b4-95c9a01f0d0b" Timeout="100" Version="V3">
+                                  <uix:NCheckState DisplayName="Check App State Page load popup'" sap:VirtualizedContainerService.HintSize="450,79.33333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_51" ScopeIdentifier="5d6be876-045b-4edf-96b4-95c9a01f0d0b" Timeout="100" Version="V3">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,744" sap2010:WorkflowViewState.IdRef="Sequence_406">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -1012,7 +1012,7 @@
                                 <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Adding Transaction items to queue" sap:VirtualizedContainerService.HintSize="822.6666666666666,4877.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_443">
+                            <Sequence DisplayName="Adding Transaction items to queue" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_443">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="boolRowExist" />
                               </Sequence.Variables>
