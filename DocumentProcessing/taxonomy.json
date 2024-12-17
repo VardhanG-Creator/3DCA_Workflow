@@ -4,10 +4,10 @@
     {
       "Connections": [],
       "DocumentTypeId": "NoGroup.NoCategory.OpeningBrief",
-      "Group": "",
+      "Group": "Briefs",
       "Category": "",
       "Name": "Appellant Opening Brief",
-      "OptionalUniqueIdentifier": "",
+      "OptionalUniqueIdentifier": "AOB",
       "TypeField": {
         "FieldId": "NoGroup.NoCategory.OpeningBrief.DocumentType",
         "FieldName": "Document Type"
@@ -32,7 +32,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -54,7 +54,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -76,7 +76,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -98,7 +98,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -120,7 +120,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -142,7 +142,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -164,7 +164,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -186,7 +186,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -208,7 +208,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -230,7 +230,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -252,7 +252,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -274,7 +274,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -296,7 +296,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -318,7 +318,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -340,7 +340,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -362,7 +362,7 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
           "DataSource": null
         },
         {
@@ -384,13 +384,428 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": null,
+          "DefaultValue": "",
+          "DataSource": null
+        }
+      ]
+    },
+    {
+      "Connections": [],
+      "DocumentTypeId": "NoGroup.NoCategory.WendeBrief",
+      "Group": "Briefs",
+      "Category": "",
+      "Name": "Wende Brief",
+      "OptionalUniqueIdentifier": "WENDE",
+      "TypeField": {
+        "FieldId": "NoGroup.NoCategory.WendeBrief.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.CaseNumber",
+          "FieldName": "Case Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.TrialCourtCaseNumber",
+          "FieldName": "Trial Court Case Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#20389d"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.CaseHeading",
+          "FieldName": "Case Heading",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#279aab"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.Judge",
+          "FieldName": "Judge",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "j"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.AttorneyName",
+          "FieldName": "Attorney Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#638ee1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.AttorneyAddress",
+          "FieldName": "Attorney Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5c22cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.AttorneyPhoneNumber",
+          "FieldName": "Attorney Phone Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a482e0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.AttorneyEmail",
+          "FieldName": "Attorney Email",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#54b689"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.WendeBrief",
+          "FieldName": "Wende Brief",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#3d7d77"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "w"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.StatementofFacts",
+          "FieldName": "Statement of Facts",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#632e63"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.TableofContents",
+          "FieldName": "Table of Contents",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b67cbc"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.TableofAuthorities",
+          "FieldName": "Table of Authorities",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d650da"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.CertificateofCompliance",
+          "FieldName": "Certificate of Compliance",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6e95b2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "k"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.ProofofService",
+          "FieldName": "Proof of Service",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f2466e"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.ElectronicReceivedStamp",
+          "FieldName": "Electronic Received Stamp",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5f35ba"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "z"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.oDeclarationofAppellateCounsel",
+          "FieldName": "Declaration of Appellate Counsel",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b56bea"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "x"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.StatementofAppealability(Optional)",
+          "FieldName": "Statement of Appealability(Optional)",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#276991"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "("
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.WendeBrief.Argument(Optional)",
+          "FieldName": "Argument",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#89de22"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": ")"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
           "DataSource": null
         }
       ]
     }
   ],
-  "Groups": [],
+  "Groups": [
+    {
+      "Name": "Briefs",
+      "Categories": []
+    }
+  ],
   "SupportedLanguages": [
     {
       "Name": "Undetermined Language",

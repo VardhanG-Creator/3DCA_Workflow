@@ -1,18 +1,17 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="DocumentUnderstandingClassification" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p1="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p3="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p4="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="files" Type="OutArgument(s:String[])" />
     <x:Property Name="taxonomy" Type="OutArgument(p:DocumentTaxonomy)" />
     <x:Property Name="text" Type="OutArgument(x:String)" />
     <x:Property Name="dom" Type="OutArgument(p1:Document)" />
-    <x:Property Name="classificationResult" Type="OutArgument(p2:ClassificationResult[])" />
-    <x:Property Name="docName" Type="OutArgument(x:String)" />
-    <x:Property Name="ValidationResult" Type="InArgument(p2:ExtractionResult)" />
     <x:Property Name="in_str_currentPdf" Type="InArgument(x:String)" />
+    <x:Property Name="out_classificationResults" Type="OutArgument(p2:ClassificationResult[])" />
+    <x:Property Name="out_strDocName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_boolIsDocClassified" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,1267</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,1280.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DocumentUnderstandingClassification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -60,10 +59,13 @@
       <x:String>UiPath.OCR.Activities</x:String>
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="124">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -125,259 +127,236 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="734,1202" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="734.6666666666666,1216" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="672,1114" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="672.6666666666666,1128" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Flowchart DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="634,819" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="634,819.3333333333334" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-              <av:Size x:Key="ShapeSize">60,75</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,77.16666666666667 300,107.16666666666667 298.8,107.16666666666667 298.8,107.7</av:PointCollection>
+              <av:Size x:Key="ShapeSize">60,74.66666666666667</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,77.16666666666667 300,137.29999999999998</av:PointCollection>
               <x:Double x:Key="Height">781.8</x:Double>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID7</x:Reference>
+            <x:Reference>__ReferenceID6</x:Reference>
           </Flowchart.StartNode>
-          <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+          <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">198.8,107.7</av:Point>
-                <av:Size x:Key="ShapeSize">200,52</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">298.8,159.7 298.8,189.70000000000002 300,189.70000000000002 300,197.29999999999998</av:PointCollection>
+                <av:Point x:Key="ShapeLocation">200,358.8</av:Point>
+                <av:Size x:Key="ShapeSize">200,54</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,412.8 300,461.2</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                  <Assign sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="Assign_3">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="s:String[]">[files]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Brief")]</InArgument>
-                    </Assign.Value>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;DU Workflow running for document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt;&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">200,461.2</av:Point>
+                    <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">300,545.8666666666667 300,604</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Digitization" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Digitizing document &lt;&quot; + out_strDocName + &quot;&gt;&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </Assign>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_2">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">200,197.29999999999998</av:Point>
-                    <av:Size x:Key="ShapeSize">200,68</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">300,265.29999999999995 300,295.29999999999995 298.8,295.29999999999995 298.8,305.7</av:PointCollection>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <p3:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_2" Taxonomy="[taxonomy]">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </p3:LoadTaxonomy>
-                <FlowStep.Next>
-                  <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+                  </ui:LogMessage>
+                  <p3:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Yes" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="388,347.3333333333333" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+                    <p3:DigitizeDocument.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
+                        <p4:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="xIj5mw5IurW3w3UJ9KQlXsjdRWw7YBNnbEwV8N3V3ObNhBjf3kgNIzQKx3hBKAshlXAYTg98sgC14xyqXJKatQ==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="1000000">
+                          <p4:UiPathDocumentOCR.Image>
+                            <InArgument x:TypeArguments="sd:Image">
+                              <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
+                                <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p4:UiPathDocumentOCR.Image>
+                          <p4:UiPathDocumentOCR.PredictionId>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
+                                <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p4:UiPathDocumentOCR.PredictionId>
+                        </p4:UiPathDocumentOCR>
+                      </ActivityFunc>
+                    </p3:DigitizeDocument.OCREngine>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">198.8,305.7</av:Point>
-                        <av:Size x:Key="ShapeSize">200,52</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">298.8,357.7 298.8,387.69999999999993 300,387.69999999999993 300,398.8</av:PointCollection>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Assign_2">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[docName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[Path.GetFileName(in_str_currentPdf)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <FlowStep.Next>
-                      <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                  </p3:DigitizeDocument>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Digitizing document &lt;&quot; + out_strDocName + &quot;&gt; is completed.&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">200,604</av:Point>
+                        <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">390,781.8 390,811.8 390.1,811.8 390.1,826.5</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="540,954" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt;&quot;]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">200,398.8</av:Point>
-                            <av:Size x:Key="ShapeSize">200,52</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">300,450.8 300,491.2</av:PointCollection>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;DU Workflow running for document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt;&quot;]">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:LogMessage>
-                        <FlowStep.Next>
-                          <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_5">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">200,491.2</av:Point>
-                                <av:Size x:Key="ShapeSize">200,81</av:Size>
-                                <av:PointCollection x:Key="ConnectorLocation">300,572.2 300,614</av:PointCollection>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Digitization" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Digitizing document &lt;&quot; + docName + &quot;&gt;&quot;]">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:LogMessage>
-                              <p3:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Yes" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="388,330" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
-                                <p3:DigitizeDocument.OCREngine>
-                                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
-                                    <p4:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="xIj5mw5IurW3w3UJ9KQlXsjdRWw7YBNnbEwV8N3V3ObNhBjf3kgNIzQKx3hBKAshlXAYTg98sgC14xyqXJKatQ==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="1000000">
-                                      <p4:UiPathDocumentOCR.Image>
-                                        <InArgument x:TypeArguments="sd:Image">
-                                          <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
-                                            <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
-                                          </DelegateArgumentValue>
-                                        </InArgument>
-                                      </p4:UiPathDocumentOCR.Image>
-                                      <p4:UiPathDocumentOCR.PredictionId>
-                                        <InArgument x:TypeArguments="x:String">
-                                          <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
-                                            <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
-                                          </DelegateArgumentValue>
-                                        </InArgument>
-                                      </p4:UiPathDocumentOCR.PredictionId>
-                                    </p4:UiPathDocumentOCR>
-                                  </ActivityFunc>
-                                </p3:DigitizeDocument.OCREngine>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </p3:DigitizeDocument>
-                            </Sequence>
-                            <FlowStep.Next>
-                              <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_6">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <av:Point x:Key="ShapeLocation">200,614</av:Point>
-                                    <av:Size x:Key="ShapeSize">200,81</av:Size>
-                                    <av:PointCollection x:Key="ConnectorLocation">390,781.8 390,811.8 390.1,811.8 390.1,826.5</av:PointCollection>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="540,933" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,181" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt;&quot;]">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:LogMessage>
-                                  <p5:ClassifyDocumentScope ClassificationResults="[classificationResult]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,500" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9a62ddb2c9dd44ae807ec034d10cf49e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.OpeningBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.OpeningBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI9a62ddb2c9dd44ae807ec034d10cf49e&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI9a62ddb2c9dd44ae807ec034d10cf49e&quot;:[]}}">
-                                    <p5:ClassifyDocumentScope.Classifiers>
-                                      <p5:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="223,138" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="DocumentProcessing\classifier.json" PersistenceId="UI9a62ddb2c9dd44ae807ec034d10cf49e">
-                                        <p5:KeywordBasedClassifier.ClassifierResult>
-                                          <OutArgument x:TypeArguments="p6:ClassifierResult">
-                                            <DelegateArgumentReference x:TypeArguments="p6:ClassifierResult">
-                                              <DelegateOutArgument x:TypeArguments="p6:ClassifierResult" Name="ClassifierResult" />
-                                            </DelegateArgumentReference>
-                                          </OutArgument>
-                                        </p5:KeywordBasedClassifier.ClassifierResult>
-                                        <p5:KeywordBasedClassifier.DocumentObjectModel>
-                                          <InArgument x:TypeArguments="p1:Document">
-                                            <DelegateArgumentValue x:TypeArguments="p1:Document">
-                                              <DelegateInArgument x:TypeArguments="p1:Document" Name="DocumentObjectModel" />
-                                            </DelegateArgumentValue>
-                                          </InArgument>
-                                        </p5:KeywordBasedClassifier.DocumentObjectModel>
-                                        <p5:KeywordBasedClassifier.DocumentPath>
-                                          <InArgument x:TypeArguments="x:String">
-                                            <DelegateArgumentValue x:TypeArguments="x:String">
-                                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
-                                            </DelegateArgumentValue>
-                                          </InArgument>
-                                        </p5:KeywordBasedClassifier.DocumentPath>
-                                        <p5:KeywordBasedClassifier.DocumentText>
-                                          <InArgument x:TypeArguments="x:String">
-                                            <DelegateArgumentValue x:TypeArguments="x:String">
-                                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
-                                            </DelegateArgumentValue>
-                                          </InArgument>
-                                        </p5:KeywordBasedClassifier.DocumentText>
-                                        <p5:KeywordBasedClassifier.DocumentTypes>
-                                          <InArgument x:TypeArguments="p6:ClassifierDocumentType[]">
-                                            <DelegateArgumentValue x:TypeArguments="p6:ClassifierDocumentType[]">
-                                              <DelegateInArgument x:TypeArguments="p6:ClassifierDocumentType[]" Name="DocumentTypes" />
-                                            </DelegateArgumentValue>
-                                          </InArgument>
-                                        </p5:KeywordBasedClassifier.DocumentTypes>
-                                        <p5:KeywordBasedClassifier.PredictionId>
-                                          <InArgument x:TypeArguments="x:String">
-                                            <DelegateArgumentValue x:TypeArguments="x:String">
-                                              <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
-                                            </DelegateArgumentValue>
-                                          </InArgument>
-                                        </p5:KeywordBasedClassifier.PredictionId>
-                                      </p5:KeywordBasedClassifier>
-                                    </p5:ClassifyDocumentScope.Classifiers>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </p5:ClassifyDocumentScope>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Digitization is Completed&quot;]" />
-                                </Sequence>
-                              </FlowStep>
-                            </FlowStep.Next>
-                          </FlowStep>
-                        </FlowStep.Next>
-                      </FlowStep>
-                    </FlowStep.Next>
+                      </ui:LogMessage>
+                      <p5:ClassifyDocumentScope ClassificationResults="[out_classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,514" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.OpeningBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.OpeningBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.WendeBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.WendeBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:[]}}">
+                        <p5:ClassifyDocumentScope.Classifiers>
+                          <p5:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="222.66666666666666,140" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\classifier.json" PersistenceId="UI2a0caff00bcf4b48a017202a43cbd20b">
+                            <p5:KeywordBasedClassifier.ClassifierResult>
+                              <OutArgument x:TypeArguments="p6:ClassifierResult">
+                                <DelegateArgumentReference x:TypeArguments="p6:ClassifierResult">
+                                  <DelegateOutArgument x:TypeArguments="p6:ClassifierResult" Name="ClassifierResult" />
+                                </DelegateArgumentReference>
+                              </OutArgument>
+                            </p5:KeywordBasedClassifier.ClassifierResult>
+                            <p5:KeywordBasedClassifier.DocumentObjectModel>
+                              <InArgument x:TypeArguments="p1:Document">
+                                <DelegateArgumentValue x:TypeArguments="p1:Document">
+                                  <DelegateInArgument x:TypeArguments="p1:Document" Name="DocumentObjectModel" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p5:KeywordBasedClassifier.DocumentObjectModel>
+                            <p5:KeywordBasedClassifier.DocumentPath>
+                              <InArgument x:TypeArguments="x:String">
+                                <DelegateArgumentValue x:TypeArguments="x:String">
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p5:KeywordBasedClassifier.DocumentPath>
+                            <p5:KeywordBasedClassifier.DocumentText>
+                              <InArgument x:TypeArguments="x:String">
+                                <DelegateArgumentValue x:TypeArguments="x:String">
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p5:KeywordBasedClassifier.DocumentText>
+                            <p5:KeywordBasedClassifier.DocumentTypes>
+                              <InArgument x:TypeArguments="p6:ClassifierDocumentType[]">
+                                <DelegateArgumentValue x:TypeArguments="p6:ClassifierDocumentType[]">
+                                  <DelegateInArgument x:TypeArguments="p6:ClassifierDocumentType[]" Name="DocumentTypes" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p5:KeywordBasedClassifier.DocumentTypes>
+                            <p5:KeywordBasedClassifier.PredictionId>
+                              <InArgument x:TypeArguments="x:String">
+                                <DelegateArgumentValue x:TypeArguments="x:String">
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p5:KeywordBasedClassifier.PredictionId>
+                          </p5:KeywordBasedClassifier>
+                        </p5:ClassifyDocumentScope.Classifiers>
+                      </p5:ClassifyDocumentScope>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt; is completed.&quot;]" />
+                    </Sequence>
                   </FlowStep>
                 </FlowStep.Next>
               </FlowStep>
             </FlowStep.Next>
           </FlowStep>
-          <x:Reference>__ReferenceID2</x:Reference>
+          <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">198.8,255.7</av:Point>
+                <av:Size x:Key="ShapeSize">200,54</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">298.8,309.7 298.8,339.7 300,339.7 300,358.8</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_strDocName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Path.GetFileName(in_str_currentPdf)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <FlowStep.Next>
+              <x:Reference>__ReferenceID2</x:Reference>
+            </FlowStep.Next>
+          </FlowStep>
           <x:Reference>__ReferenceID3</x:Reference>
           <x:Reference>__ReferenceID4</x:Reference>
-          <x:Reference>__ReferenceID5</x:Reference>
-          <x:Reference>__ReferenceID6</x:Reference>
+          <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">200,137.29999999999998</av:Point>
+                <av:Size x:Key="ShapeSize">200,70</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,207.29999999999998 300,237.29999999999998 298.8,237.29999999999998 298.8,255.7</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p3:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="200,70" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_2" Taxonomy="[taxonomy]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p3:LoadTaxonomy>
+            <FlowStep.Next>
+              <x:Reference>__ReferenceID5</x:Reference>
+            </FlowStep.Next>
+          </FlowStep>
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="638.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -388,10 +367,10 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:SystemException" Name="exception" />
             </ActivityAction.Argument>
-            <Rethrow sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+            <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="638.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -402,10 +381,10 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <Rethrow sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
+            <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="638.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -416,7 +395,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Rethrow sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_3" />
+            <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_3" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>

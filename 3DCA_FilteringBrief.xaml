@@ -1,0 +1,936 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_3DCA_FilteringBrief" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="in_status" Type="InArgument(x:String)" />
+    <x:Property Name="in_strObFilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1150,500.66666666666674</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Persistence.Activities.ExternalTask</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Actions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Actions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>WindowsFormsIntegration</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="496,436" sap2010:WorkflowViewState.IdRef="Sequence_1221">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_splitItemsCount" />
+      <Variable x:TypeArguments="x:String" Name="str_ItemsCount" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="584.6666666666666,4097.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard sap2010:Annotation.AnnotationText="Filter with Case Number" AttachMode="ByInstance" DisplayName="Use Application: OnBase (OnBase-JCC-Prod-SSO)" sap:VirtualizedContainerService.HintSize="546,3811.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_72" ScopeGuid="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,3483.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_784">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="str_CurrentCaseNumber" />
+                  <Variable x:TypeArguments="x:String" Name="str_DocType" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="GetActiveWindow_13">
+                  <ui:GetActiveWindow.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_774">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:GetActiveWindow.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GetActiveWindow>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,187.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_383" Level="Info" Message="[&quot;Started Filtering &quot;+str_DocType+&quot; Documents in Onbase.&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <Assign sap:VirtualizedContainerService.HintSize="450,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_233">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_DocType]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[TransactionItem.SpecificContent("Document Type").ToString]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="450,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_176">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_CurrentCaseNumber]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[TransactionItem.SpecificContent("Case Number").ToString]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="3DCA_DocPopupclose - Invoke Workflow File (3DCA_DocPopupclose.xaml)" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="3DCA_DocPopupclose.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strObFilePath">[in_strObFilePath]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="450,147.33333333333334" sap2010:WorkflowViewState.IdRef="Click_53" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9b0392f-eb34-44d6-a31c-04d523b60235" InformativeScreenshot="038681723d70b166954af4910287d16f" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='ClearActiveCellFilters' role='push button' idx='5' /&gt;" WaitForReady="COMPLETE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:Click.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:Click>
+                <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayAfter="1" DisplayName="Type Into 'Case Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,300.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_84" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="CRIMINAL[k(Enter)]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="1094, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='4' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="287af32a-d944-43cc-9a30-1e1695be09bf" ImageBase64="" InformativeScreenshot="58dca6d5aaa463fe0a5967e2d2cab105.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArea="1071, 354, 51, 16" CvTextArgument="Case Type" CvType="Text" DesignTimeRectangle="1074, 349, 228, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow*' role='list' /&gt;&lt;ctrl name='Case Type' role='column header' /&gt;&lt;ctrl name='Case Type' role='text' text='Case Type' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow.WorkItemInfoList`1[Hyland.Canvas*' role='list' /&gt;&lt;ctrl name='Case Type' role='column header' /&gt;&lt;ctrl name='Case Type' role='text' automationid='' check:text='Case Type' /&gt;" Guid="ebe01fb7-69d2-4a15-b66b-2d800ebf9070" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.VerifyOptions>
+                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    </uix:VerifyExecutionTypeIntoOptions>
+                  </uix:NTypeInto.VerifyOptions>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="3DCA_DocPopupclose - Invoke Workflow File (3DCA_DocPopupclose.xaml)" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="3DCA_DocPopupclose.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strObFilePath">[in_strObFilePath]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayAfter="1" DisplayName="Type Into 'Status'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,300.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_85" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="[in_status+&quot;[k(Enter)]&quot;]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="1094, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='8' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="287af32a-d944-43cc-9a30-1e1695be09bf" ImageBase64="" InformativeScreenshot="58dca6d5aaa463fe0a5967e2d2cab105.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArea="1071, 354, 51, 16" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="1074, 349, 228, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow*' role='list' /&gt;&lt;ctrl name='Status' role='column header' /&gt;&lt;ctrl name='Status' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow.WorkItemInfoList`1[Hyland.Canvas*' role='list' /&gt;&lt;ctrl name='Status' role='column header' /&gt;&lt;ctrl name='Status' role='text' automationid='' check:text='Status' /&gt;" Guid="8e37a680-7af6-4679-a017-6160706fb7e5" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.VerifyOptions>
+                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    </uix:VerifyExecutionTypeIntoOptions>
+                  </uix:NTypeInto.VerifyOptions>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayBetweenKeys="0" DisplayName="Type Into 'TrueFiling Document Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,262.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_86" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="[str_DocType + &quot;[k(Enter)]&quot;]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="1538, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='11' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="484a6a2d-d236-444a-a4d8-864fefadc35c" InformativeScreenshot="e39f0c4cbfaff2134be5b659948bb29c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArea="1515, 352, 207, 22" CvTextArgument="TrueFiling Document Type" CvType="Text" DesignTimeRectangle="1518, 349, 228, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='TrueFiling Document Type' role='column header' /&gt;&lt;ctrl name='TrueFiling Document Type' role='text' text='TrueFiling Document Type' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow.WorkItemInfoList`1[Hyland.Canvas*' role='list' /&gt;&lt;ctrl name='TrueFiling Document Type' role='column header' /&gt;&lt;ctrl name='TrueFiling Document Type' role='text' automationid='' check:text='TrueFiling Document Type' /&gt;" Guid="2e18bb1c-8661-4952-ae17-c638e6f8415e" SearchSteps="Selector, FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,187.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_384" Level="Info" Message="[&quot;Added True filing Filter in Onbase for &quot;+str_DocType]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="3DCA_DocPopupclose - Invoke Workflow File (3DCA_DocPopupclose.xaml)" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="3DCA_DocPopupclose.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strObFilePath">[in_strObFilePath]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="1" DisplayName="Type Into 'Case Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,262.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_38" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="[str_CurrentCaseNumber+ &quot;[k(enter)]&quot;]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="1094, 384, 184, 36" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl automationid='inboxPane' /&gt;&lt;ctrl automationid='Inbox' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl role='client' idx='5' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl automationid='' role='combo box' /&gt;" Guid="287af32a-d944-43cc-9a30-1e1695be09bf" ImageBase64="" InformativeScreenshot="58dca6d5aaa463fe0a5967e2d2cab105.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" WaitForReadyArgument="Complete">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArea="1071, 354, 51, 16" CvTextArgument="Case Number" CvType="Text" DesignTimeRectangle="1074, 349, 228, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow*' role='list' /&gt;&lt;ctrl name='Case Number' role='column header' /&gt;&lt;ctrl name='Case Number' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Canvas.Controls.Workflow.WorkItemInfoList`1[Hyland.Canvas*' role='list' /&gt;&lt;ctrl name='Case Number' role='column header' /&gt;&lt;ctrl name='Case Number' role='text' automationid='' check:text='Case Number' /&gt;" Guid="fbc3008b-2a3d-4b3b-96e7-fae4c9cafa65" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="3DCA_DocPopupclose - Invoke Workflow File (3DCA_DocPopupclose.xaml)" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="3DCA_DocPopupclose.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strObFilePath">[in_strObFilePath]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,187.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_385" Level="Info" Message="[&quot;Added Case Number &quot;+str_CurrentCaseNumber+&quot; for the Filter in Onbase for &quot;+str_DocType]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'text  0 Items'" sap:VirtualizedContainerService.HintSize="450,147.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f7c7ce3-f30f-4e1b-9976-18dfcf841f21" InformativeScreenshot="ce7ca7e860d5f3ecad2cbe357069cb01" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='*Item*' role='text' /&gt;" WaitForReady="COMPLETE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="x:String">[str_ItemsCount]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
+                <Assign sap:VirtualizedContainerService.HintSize="450,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_232">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_splitItemsCount]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[str_ItemsCount.Split(" "c)(0)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <If Condition="[Cint(str_splitItemsCount.ToString.Trim)=0 or str_splitItemsCount.ToString.Trim=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="If_228">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,199.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1191">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Unable to process (Case Number: &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;) as it cannot be found in OnBase.&quot;)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_34" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1192">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5" DisplayName="Click 'Document with Case Number*'" sap:VirtualizedContainerService.HintSize="450,147.33333333333334" sap2010:WorkflowViewState.IdRef="Click_54" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7bf8f547-d4bf-479d-be8e-1e70c1042cad" InformativeScreenshot="73ee24b1f13729a312b4c7927737f0d4" Selector="[string.Format(&quot;&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='{0}' role='client' /&gt;&quot;, str_CurrentCaseNumber)]">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:Click>
+                <Sequence sap2010:Annotation.AnnotationText="Check for doc is locked or not&#xA;If it is locked, Bot unlocks the doc and proceed" DisplayName="Doc Popup close" sap:VirtualizedContainerService.HintSize="450,170" sap2010:WorkflowViewState.IdRef="Sequence_1100">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="bool_docPopupExists" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists 'text You'" Exists="[bool_docPopupExists]" sap:VirtualizedContainerService.HintSize="450,147.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_108">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed7c729f-6e48-4c7c-8f88-6cece2c2f063" InformativeScreenshot="a4afd4cda2278c35e31d52f51e0c4400" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' idx='*' /&gt;&lt;ctrl automationid='messageTextblock' name='You cannot view document *is already working on this document.' role='text' text='You cannot view document*is already working on this document.' /&gt;" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[bool_docPopupExists]" sap:VirtualizedContainerService.HintSize="450,348" sap2010:WorkflowViewState.IdRef="If_203">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1098">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="450,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_457" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvElementArea="238, 172, 189, 47" CvTextArea="319, 187, 27, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="240, 173, 188, 45" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='okButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='okButton' role='push button' check:text='OK' /&gt;" Guid="ba91499f-6582-4bd5-afbe-3df34e29d29e" InformativeScreenshot="f21af9e8444685d13e6cde9374cae3ff.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvElementArea="238, 172, 189, 47" CvTextArea="319, 187, 27, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="322, 183, 24, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='okButton' /&gt;&lt;ctrl name='OK' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='okButton' /&gt;&lt;ctrl name='OK' role='text' automationid='' check:text='OK' /&gt;" Guid="a4247d54-e67d-4d91-9440-ffbc611fdb0c" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Sequence DisplayName="Sequence for Remove Locking for the Doc" sap:VirtualizedContainerService.HintSize="450,1820.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1097">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_331" Level="Info" Message="[&quot;Remove locking&quot;]" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DelayBefore="1" DisplayName="Click 'File'" sap:VirtualizedContainerService.HintSize="388,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_458" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CvTextArgument="File" DesignTimeRectangle="11, 44, 84, 36" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl automationid='canvasRibbonToolbar' /&gt;&lt;ctrl automationid='applicationMenu' name='File' role='popup menu' text='File' aastate='collapsed' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='canvasRibbonToolbar' /&gt;&lt;ctrl automationid='applicationMenu' role='popup menu' check:text='File' /&gt;" Guid="2e166b1e-13dd-4184-9de4-400c30620faa" InformativeScreenshot="8a3fe6d79c551a92dbff5030d7dcc4dc.png" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Administration'" sap:VirtualizedContainerService.HintSize="388,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_459" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="3, 239, 269, 66" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl automationid='adminMenuGroup' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='adminMenuGroup' role='menu item' check:text='Administration' /&gt;" Guid="fb08c3e9-c463-49a6-abb6-f11ac2ea5b3e" InformativeScreenshot="3cacffef322ad88f3432f5689d1c0e53.png" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Manage Locks'" sap:VirtualizedContainerService.HintSize="388,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_460" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="5, 3, 358, 57" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl automationid='manageLocksMenuItem' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='manageLocksMenuItem' role='menu item' check:text='Manage Locks' /&gt;" Guid="a8e37311-f481-41b0-a0d8-a0c9f2c23981" InformativeScreenshot="91bd21f86b23ffbf9ab608f9710e9750.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="LogMessage_332" Level="Info" Message="[&quot;Removing lock for the files&quot;]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'C* -'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="388,262.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_82" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="%[k(Enter)][d(ctrl)]a[u(ctrl)]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="439, 133, 504, 30" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl role='editable text' text='*' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl automationid='' role='editable text' /&gt;" Guid="b2b531ca-da18-4072-96d0-1e9e7f969a8c" InformativeScreenshot="6974beb99b9fae81de566276944bda6e.png" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Remove Selected'" sap:VirtualizedContainerService.HintSize="388,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_461" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="574, 652, 187, 64" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='removeSelectedLocks' name='Remove Selected' role='push button' text='Remove Selected' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='removeSelectedLocks' role='push button' check:text='Remove Selected' /&gt;" Guid="2cbc4af3-940e-4001-9c5e-d22d6089cb5c" InformativeScreenshot="6d8c6bffbed8e213fbd1765050ebb04c.png" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="600, 684, 135, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='removeSelectedLocks' /&gt;&lt;ctrl name='Remove Selected' role='text' text='Remove Selected' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='removeSelectedLocks' /&gt;&lt;ctrl name='Remove Selected' role='text' automationid='' check:text='Remove Selected' /&gt;" Guid="3b036289-1b03-4e14-aca9-660425c397ad" SearchSteps="Selector, FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'obunity.exe Manage'" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="CloseWindow_39" InformativeScreenshot="8e055345099a59cf6db4cb529e1d84ac" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' aaname='Manage Locks' aastate='sizeable, moveable, focusable' /&gt;" WaitForReady="COMPLETE" />
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5" DisplayName="Click 'Document with Case Number*'" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="Click_114" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7bf8f547-d4bf-479d-be8e-1e70c1042cad" InformativeScreenshot="73ee24b1f13729a312b4c7927737f0d4" Selector="[string.Format(&quot;&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='{0}' role='client' /&gt;&quot;, str_CurrentCaseNumber)]">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Click>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,76.66666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_26">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="608,1731.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1096">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:UiElementExists DisplayName="Element Exists" Exists="[bool_lockExists]" sap:VirtualizedContainerService.HintSize="546,127.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_109">
+                                  <ui:UiElementExists.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99ea4c55-5bda-4658-bc97-33a5b714ceee" Selector="[string.Format(&quot;&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl automationid='TextBlock' role='text' text='{0}*' /&gt;&quot;, str_CurrentCaseNumber)]" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:UiElementExists.Target>
+                                </ui:UiElementExists>
+                                <If Condition="[bool_lockExists]" sap:VirtualizedContainerService.HintSize="546,1519.3333333333333" sap2010:WorkflowViewState.IdRef="If_202">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If.Then>
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,994.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1094">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[bool_lockExists&lt;&gt;False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="450,632.6666666666666" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_30">
+                                        <ui:InterruptibleDoWhile.Body>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,476.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1093">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="LogMessage_333" Level="Info" Message="[&quot;Removing lock for the files&quot;]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:LogMessage>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C* -'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="NTypeInto_83" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Text="%[k(Enter)]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="439, 133, 504, 30" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl role='editable text' text='*' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl automationid='' role='editable text' /&gt;" Guid="b2b531ca-da18-4072-96d0-1e9e7f969a8c" InformativeScreenshot="6974beb99b9fae81de566276944bda6e.png" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Remove Selected'" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="NClick_462" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="574, 652, 187, 64" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='removeSelectedLocks' name='Remove Selected' role='push button' text='Remove Selected' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='removeSelectedLocks' role='push button' check:text='Remove Selected' /&gt;" Guid="2cbc4af3-940e-4001-9c5e-d22d6089cb5c" InformativeScreenshot="6d8c6bffbed8e213fbd1765050ebb04c.png" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target DesignTimeRectangle="600, 684, 135, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='removeSelectedLocks' /&gt;&lt;ctrl name='Remove Selected' role='text' text='Remove Selected' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='removeSelectedLocks' /&gt;&lt;ctrl name='Remove Selected' role='text' automationid='' check:text='Remove Selected' /&gt;" Guid="3b036289-1b03-4e14-aca9-660425c397ad" SearchSteps="Selector, FuzzySelector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NClick>
+                                            <ui:UiElementExists DisplayName="Element Exists" Exists="[bool_lockExists]" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="UiElementExists_110">
+                                              <ui:UiElementExists.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99ea4c55-5bda-4658-bc97-33a5b714ceee" Selector="[string.Format(&quot;&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl automationid='TextBlock' role='text' text='{0}*' /&gt;&quot;, str_CurrentCaseNumber)]" WaitForReady="INTERACTIVE">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                </ui:Target>
+                                              </ui:UiElementExists.Target>
+                                            </ui:UiElementExists>
+                                          </Sequence>
+                                        </ui:InterruptibleDoWhile.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InterruptibleDoWhile>
+                                      <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'obunity.exe Manage'" sap:VirtualizedContainerService.HintSize="450,147.33333333333334" sap2010:WorkflowViewState.IdRef="CloseWindow_40" InformativeScreenshot="8e055345099a59cf6db4cb529e1d84ac" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' aaname='Manage Locks' aastate='sizeable, moveable, focusable' /&gt;" WaitForReady="COMPLETE" />
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5" DisplayName="Click 'Document with Case Number*'" sap:VirtualizedContainerService.HintSize="450,130" sap2010:WorkflowViewState.IdRef="Click_115" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7bf8f547-d4bf-479d-be8e-1e70c1042cad" InformativeScreenshot="73ee24b1f13729a312b4c7927737f0d4" Selector="[string.Format(&quot;&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='{0}' role='client' /&gt;&quot;, str_CurrentCaseNumber)]">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:Click>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,362" sap2010:WorkflowViewState.IdRef="Sequence_1095">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'obunity.exe Manage'" sap:VirtualizedContainerService.HintSize="354,147.33333333333334" sap2010:WorkflowViewState.IdRef="CloseWindow_41" InformativeScreenshot="8e055345099a59cf6db4cb529e1d84ac" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' aaname='Manage Locks' aastate='sizeable, moveable, focusable' /&gt;" WaitForReady="COMPLETE" />
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5" DisplayName="Click 'Document with Case Number*'" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="Click_116" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7bf8f547-d4bf-479d-be8e-1e70c1042cad" InformativeScreenshot="73ee24b1f13729a312b4c7927737f0d4" Selector="[string.Format(&quot;&lt;ctrl name='Inbox' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='{0}' role='client' /&gt;&quot;, str_CurrentCaseNumber)]">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:Click>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1099">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+                <Sequence sap2010:Annotation.AnnotationText="Check for doc is still locked or not&#xA;If it is locked, throw the BE." DisplayName="Doc Popup close" sap:VirtualizedContainerService.HintSize="450,155.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1204">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="bool_lockExists" />
+                    <Variable x:TypeArguments="x:Boolean" Name="bool_docPopupExists" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists" Exists="[bool_lockExists]" sap:VirtualizedContainerService.HintSize="388,127.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_138">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99ea4c55-5bda-4658-bc97-33a5b714ceee" Selector="[string.Format(&quot;&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='Manage Locks' /&gt;&lt;ctrl name='Locks' role='page tab' /&gt;&lt;ctrl name='Records' role='list' /&gt;&lt;ctrl name='Hyland.Types.Element' role='list item' /&gt;&lt;ctrl automationid='TextBlock' role='text' text='{0}*' /&gt;&quot;, str_CurrentCaseNumber)]" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:UiElementExists DisplayName="Element Exists 'text You'" Exists="[bool_docPopupExists]" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_139">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed7c729f-6e48-4c7c-8f88-6cece2c2f063" InformativeScreenshot="a4afd4cda2278c35e31d52f51e0c4400" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' idx='*' /&gt;&lt;ctrl automationid='messageTextblock' name='You cannot view document *is already working on this document.' role='text' text='You cannot view document*is already working on this document.' /&gt;" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[bool_lockExists or bool_docPopupExists]" sap:VirtualizedContainerService.HintSize="388,79.33333333333333" sap2010:WorkflowViewState.IdRef="If_237">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,578" sap2010:WorkflowViewState.IdRef="Sequence_1219">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="NClick_536" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a308b87-c6c5-44cd-8e61-bcd274b7b6ad" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvElementArea="238, 172, 189, 47" CvTextArea="319, 187, 27, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="240, 173, 188, 45" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='okButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='okButton' role='push button' check:text='OK' /&gt;" Guid="ba91499f-6582-4bd5-afbe-3df34e29d29e" InformativeScreenshot="f21af9e8444685d13e6cde9374cae3ff.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='obunity.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvElementArea="238, 172, 189, 47" CvTextArea="319, 187, 27, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="322, 183, 24, 25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='okButton' /&gt;&lt;ctrl name='OK' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='okButton' /&gt;&lt;ctrl name='OK' role='text' automationid='' check:text='OK' /&gt;" Guid="a4247d54-e67d-4d91-9440-ffbc611fdb0c" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="LogMessage_382" Level="Info" Message="[&quot;Case Number &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot; : Document is Loked, unable to process.&quot;]" />
+                        <Throw Exception="[New BusinessRuleException(&quot;Document Processing Failure: Unable to process Case Number &quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot; Document as it is Loked by the Clerks.&quot;)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_42" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,100" sap2010:WorkflowViewState.IdRef="Sequence_1220">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-11, -11, 1942, 1042" FilePath="[in_strObFilePath]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAidSURBVGhD1VoNbJXVGa7DYWJYWLZgMCwsLlu2ZMmSBbNFg5poNBoMZmwZWFcFmSAIgmW1IkgBi/yKxUKhVekoFiuFCgMBG4VCsUK59E9KC/27hVZsK6Xt7W17e9u+e5/3O+frd7/7UfpzW+IDD/f8n/c9533f75zvIywUIKLxzOnMBGYOs55pRxPTxUxkzmROVN1vD1iA0UqQLOZNUd3QqFKOgEKLmGPVsCMDnvANzK7h83fR4bwLFJV6kB5fs43GzXmTwma8GsT7Xl1FUzcm0bJPD1PO5SrV20Qsc7SaYnjAE8xh5mM24Gy5m8Ljd9HYF6MdBb4Vx7+8nCJ3f2bfpSg1XejAg05kwr5NzNye6ijUYJnvrlEjC1KZk9X0QwMPNJV5FKO2d7XTx+W7yN/tp9TTLkdBBsMp6+HXRIUNLiqoz5W0wkwlxuDAA8wzxiGqaCmnV3Lm0t+/mkoZ7n1SNjkmzlEg8PeRsTRp6UaTExfEOLYbFb6Yiq9eow5enKRv36Nthevps/I95PW3yhyMFUqcgYE7wt4FeT+cp2dP/EOEByNOziBPp0e2HQJAEAi8Iv0IZZdWUJuvU/UMRJO3jTKLSsXuJ8x/S/rN+2iv1J2syRThNXeX7KAmn+kbq5RY/QN3eNToR3T6+2yafmKaKbxmUul2qU/IzKasi2WSHigycgvpusdLDW11lFC0IUAB8MMLW6xKRCrx+gY3HMdMR49LTSWOwoPzcl4iX7cPzYaMquYy03zsTLu0U3xO4Ukl5s3BjSTaNLTX06xTEY7Cv1Owmm3Ui2YhA1YawjopkVl9SLWig0pMZ3AD0+5X5i13FD6hJJ66e7pVq9DC19VBGeWpjkogQinEKnEDwRWjjHqiYzVHHIWPu7BJtRg+QAmnndhetInqvN+pVg7nKC7EmURivZPpROW+ZrXFYUUrR7idxfFBShyoSFMtaIMS2wAXmKu/351O/zz+twD+i8NmrbdWtRgZVDZf5lXfGMSrHrdqQb9Q4osCU1DS09NDWy9uoXWFawKIUHo74Kr7ho5UZQQQZQqLlPiigOwNnBOh0crOEIXKwaCH/8Bs7VRwaeFN8/kRYiIUmGyke3HtRrOc75OzzlBRdf9tP+dSJSV++bXJg64i6uoenpCrMBsKRBlpAzF7P6c7pi8M4F+XbbrVzUrw3Pu7gvreO3fZgBZhgEiGAilGmmjtgUyZ9O6ISFr83/307uHj9OfodVL2u0Wr5ebVF7QCC3emk6viipl/bHW8ahFy5EABCTHY6l/OjpYJ44+dRJEAJ8ifz3pdytNyzlP6mXwxLbTHYQymAtMBtMBYCABKIA/lgfpmj4yhTexsmRkSZXGsdflVvRecrOIyKUs5lStjWFAPBYqR0pOBtkb0zIYkKf/3jj30p6i1kn4idpvZHsTkVgVwpF6SkiF5/ALL0w4F9AFxmkVbvdOaT71jXAAxp7X8npeWBigOBaqRwGqiwc9e+A+yAZib9Ik5qFYAq4rJ4R/IPxTznqMP3L90g+wiUHO9SebBYkFh1EMgODvSf1yyRhavtLZOdgC7jXLMiz7YeeQxp0a/FNCrYFUg9fQ5qcssKpE8yrUCmABKP/jWZsn/4bW3ydPeIWYHYed/+KnUw9dQrxW467nF9PzWFImAgN55tNWmBYVRhnsEAAWKkOjLhJ5et8McSCuQXVIhdfhF3qqA9gFA7xACwqyEjyX961dWyJgQGHlEONRrXwNnxCXL7um8nSoqdkEBeTGF1fnNwpVSCdPQgDLYFZRjZQaqgNV/8Avh9bMBaZTpEK0Dw53PLpJyRC/86t12gDhxspEm2SJ0wNYiFEIQ2CXK4GRAfxSYtukDGQuhGHkQQkAwjI1oAkfUUQ9jYNFgBfhFGeqwYEj/at5yWrXvqPhN3JETEpUUsqBApJE2gK3UK6CJldBm1R8FrMRYsRlfSFuMba8HdbTShCnBLwBELrs88BOFRCgwyUj3AkcJHZPtT1G8AsFKwSkB/CKP8sq6H8xnA4iVsvsTIhGiC+qxC3BGPAN0rEdQ0A6qgXFRjno8cywP1HAo8GM+zE3QJ1Lxgx6mn/+xk//eFsDVO3hyOxWyRHiAM+Z7oAN17bSz1hvArMaRvxNA+BervPRwaUsA13zXbjTASdQKLpBr/wWPn1aWtwSxzDsy92GN1SzoT841BvCnrkYqbjPtf4wS3QAXzEYpNN96pZViWGgrN1Z5qBn2NALIavHTaBY2jIW2MqLSfF/q/KqRK+QJVsVa2hUAt19tpbbu4VWirKObxuXfCBJ+bN4NqvaZlyPnLzpcEW7UE33e0OGoxJbqVrreaQ4UUuR7u2h8QVOQ8GByg+mHbyhxncEN4tCqkxc68arXUYl1lR6q7LXFkCDtuo/GnA9eeTC8wjSdFCXmzcGNxjDlAA+bf9ftcVQCOxEqpLLwToKDj3Dk8fVa7QNKzL7BDR832vNpie1uszvYqYs8neTv8lP0nvn0wfH3yd1g3Mr6i9rGK5T4VRxdrPmWPOxXEwqDTecvF1uovjdwDOxrDXcw/aHJ303xvOJa+I9qjEf94bz9NG3zoyajUl+mA+fSqMDtEgGtgIK55V/T3m9SaMnuOWYfpPE+yr4LT172iGIK/fs2YAd3NJXw8WD7vm8XBWo7uvgM1ELPJzwToMBgeazgoMwxuaSFRnH4XFbTZjWbwQmvwQPAnIxLLeNKu+G82H4nYQZDLAQW5Gyrn7L5QWpBhBJjaOCB4NgSnTRgKqHagQXJL9DlayVqZAFu9L9V04cOPChMyryu+fwdfMw9RG9nRDsK1hfD46fQ+v+tEL+wYWgm0x/wJDh2mJ9MAJjAmbJs2nUqUQSDQ9u55eha08kRwSzAFQsXq+H9rwZ28IQPMPF/HEqZAwXeXOGV3a0/3I0EWJD7mPjGhs/uIHYIxN0Qv7hzoHwBc5LqNkSEhf0f74FTnQSpzT0AAAAASUVORK5CYII=" InformativeScreenshot="e36f3b1d4d5397e20c54160adb4c8eab.png" Selector="&lt;wnd app='obunity.exe' cls='HwndWrapper*' title='OnBase*' /&gt;" Title="OnBase (OnBase-JCC-Prod-SSO)" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="550.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="550.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:SystemException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:SystemException" Name="exception" />
+            </ActivityAction.Argument>
+            <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="550.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+            </ActivityAction.Argument>
+            <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_3" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

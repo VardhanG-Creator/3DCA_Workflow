@@ -4,11 +4,12 @@
     <x:Property Name="in_dt_BulkQueueItems" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_DocType" Type="InArgument(x:String)" />
     <x:Property Name="out_dt_finalBulkQueueItems" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_strDocTypeShortName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,4157.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,4197.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_3DCA_CheckPreviousQueueItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,7 +134,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="880,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Comparing last 4 Days Queue items with Current Items to Avoid duplication.&quot;]" />
-    <ui:BuildDataTable DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Build Data Table out_dt_finalBulkQueueItems" sap:VirtualizedContainerService.HintSize="880,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:BuildDataTable DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Build Data Table out_dt_finalBulkQueueItems" sap:VirtualizedContainerService.HintSize="880,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;DocType_x0020_ShortName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
     <Sequence DisplayName="Checking for Queue statuses - Inprogress, Successful" sap:VirtualizedContainerService.HintSize="880,3368" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -258,7 +259,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Case Number &quot; +CurrentRow(&quot;Case Number&quot;).ToString+&quot; was not processed. Adding to the Final Data table&quot;]" />
-                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;Case Number&quot;).ToString,in_DocType.ToString}]" DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,214" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;Case Number&quot;).ToString,in_DocType.ToString,in_strDocTypeShortName}]" DataTable="[out_dt_finalBulkQueueItems]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,214" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
