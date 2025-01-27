@@ -197,34 +197,56 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <p3:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Yes" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="388,347.3333333333333" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
-                    <p3:DigitizeDocument.OCREngine>
-                      <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
-                        <p4:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="xIj5mw5IurW3w3UJ9KQlXsjdRWw7YBNnbEwV8N3V3ObNhBjf3kgNIzQKx3hBKAshlXAYTg98sgC14xyqXJKatQ==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="1000000">
-                          <p4:UiPathDocumentOCR.Image>
-                            <InArgument x:TypeArguments="sd:Image">
-                              <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
-                                <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
-                              </DelegateArgumentValue>
-                            </InArgument>
-                          </p4:UiPathDocumentOCR.Image>
-                          <p4:UiPathDocumentOCR.PredictionId>
-                            <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
-                                <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
-                              </DelegateArgumentValue>
-                            </InArgument>
-                          </p4:UiPathDocumentOCR.PredictionId>
-                        </p4:UiPathDocumentOCR>
-                      </ActivityFunc>
-                    </p3:DigitizeDocument.OCREngine>
+                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,414.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <p3:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Yes" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="354,330" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+                            <p3:DigitizeDocument.OCREngine>
+                              <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
+                                <p4:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="xIj5mw5IurW3w3UJ9KQlXsjdRWw7YBNnbEwV8N3V3ObNhBjf3kgNIzQKx3hBKAshlXAYTg98sgC14xyqXJKatQ==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="1000000">
+                                  <p4:UiPathDocumentOCR.Image>
+                                    <InArgument x:TypeArguments="sd:Image">
+                                      <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
+                                        <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
+                                      </DelegateArgumentValue>
+                                    </InArgument>
+                                  </p4:UiPathDocumentOCR.Image>
+                                  <p4:UiPathDocumentOCR.PredictionId>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
+                                        <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
+                                      </DelegateArgumentValue>
+                                    </InArgument>
+                                  </p4:UiPathDocumentOCR.PredictionId>
+                                </p4:UiPathDocumentOCR>
+                              </ActivityFunc>
+                            </p3:DigitizeDocument.OCREngine>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </p3:DigitizeDocument>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean" />
+                    </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </p3:DigitizeDocument>
+                  </ui:RetryScope>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Digitizing document &lt;&quot; + out_strDocName + &quot;&gt; is completed.&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -243,69 +265,97 @@
                         <av:PointCollection x:Key="ConnectorLocation">390,781.8 390,811.8 390.1,811.8 390.1,826.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="540,954" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="450,534" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt;&quot;]">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt;&quot;]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <p5:ClassifyDocumentScope ClassificationResults="[out_classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,514" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.OpeningBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.OpeningBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.WendeBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.WendeBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:[]}}">
-                        <p5:ClassifyDocumentScope.Classifiers>
-                          <p5:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="222.66666666666666,140" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\classifier.json" PersistenceId="UI2a0caff00bcf4b48a017202a43cbd20b">
-                            <p5:KeywordBasedClassifier.ClassifierResult>
-                              <OutArgument x:TypeArguments="p6:ClassifierResult">
-                                <DelegateArgumentReference x:TypeArguments="p6:ClassifierResult">
-                                  <DelegateOutArgument x:TypeArguments="p6:ClassifierResult" Name="ClassifierResult" />
-                                </DelegateArgumentReference>
-                              </OutArgument>
-                            </p5:KeywordBasedClassifier.ClassifierResult>
-                            <p5:KeywordBasedClassifier.DocumentObjectModel>
-                              <InArgument x:TypeArguments="p1:Document">
-                                <DelegateArgumentValue x:TypeArguments="p1:Document">
-                                  <DelegateInArgument x:TypeArguments="p1:Document" Name="DocumentObjectModel" />
-                                </DelegateArgumentValue>
-                              </InArgument>
-                            </p5:KeywordBasedClassifier.DocumentObjectModel>
-                            <p5:KeywordBasedClassifier.DocumentPath>
-                              <InArgument x:TypeArguments="x:String">
-                                <DelegateArgumentValue x:TypeArguments="x:String">
-                                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
-                                </DelegateArgumentValue>
-                              </InArgument>
-                            </p5:KeywordBasedClassifier.DocumentPath>
-                            <p5:KeywordBasedClassifier.DocumentText>
-                              <InArgument x:TypeArguments="x:String">
-                                <DelegateArgumentValue x:TypeArguments="x:String">
-                                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
-                                </DelegateArgumentValue>
-                              </InArgument>
-                            </p5:KeywordBasedClassifier.DocumentText>
-                            <p5:KeywordBasedClassifier.DocumentTypes>
-                              <InArgument x:TypeArguments="p6:ClassifierDocumentType[]">
-                                <DelegateArgumentValue x:TypeArguments="p6:ClassifierDocumentType[]">
-                                  <DelegateInArgument x:TypeArguments="p6:ClassifierDocumentType[]" Name="DocumentTypes" />
-                                </DelegateArgumentValue>
-                              </InArgument>
-                            </p5:KeywordBasedClassifier.DocumentTypes>
-                            <p5:KeywordBasedClassifier.PredictionId>
-                              <InArgument x:TypeArguments="x:String">
-                                <DelegateArgumentValue x:TypeArguments="x:String">
-                                  <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
-                                </DelegateArgumentValue>
-                              </InArgument>
-                            </p5:KeywordBasedClassifier.PredictionId>
-                          </p5:KeywordBasedClassifier>
-                        </p5:ClassifyDocumentScope.Classifiers>
-                      </p5:ClassifyDocumentScope>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt; is completed.&quot;]" />
+                      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:03">
+                        <ui:RetryScope.ActivityBody>
+                          <ActivityAction>
+                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <p5:ClassifyDocumentScope ClassificationResults="[out_classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="354,92.66666666666667" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.OpeningBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.OpeningBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.WendeBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.WendeBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Briefs.NoCategory.hjkhhk&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Briefs.NoCategory.hjkhhk&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:[]}}">
+                                <p5:ClassifyDocumentScope.Classifiers>
+                                  <p5:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="222.66666666666666,140" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\classifier.json" PersistenceId="UI2a0caff00bcf4b48a017202a43cbd20b">
+                                    <p5:KeywordBasedClassifier.ClassifierResult>
+                                      <OutArgument x:TypeArguments="p6:ClassifierResult">
+                                        <DelegateArgumentReference x:TypeArguments="p6:ClassifierResult">
+                                          <DelegateOutArgument x:TypeArguments="p6:ClassifierResult" Name="ClassifierResult" />
+                                        </DelegateArgumentReference>
+                                      </OutArgument>
+                                    </p5:KeywordBasedClassifier.ClassifierResult>
+                                    <p5:KeywordBasedClassifier.DocumentObjectModel>
+                                      <InArgument x:TypeArguments="p1:Document">
+                                        <DelegateArgumentValue x:TypeArguments="p1:Document">
+                                          <DelegateInArgument x:TypeArguments="p1:Document" Name="DocumentObjectModel" />
+                                        </DelegateArgumentValue>
+                                      </InArgument>
+                                    </p5:KeywordBasedClassifier.DocumentObjectModel>
+                                    <p5:KeywordBasedClassifier.DocumentPath>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <DelegateArgumentValue x:TypeArguments="x:String">
+                                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                                        </DelegateArgumentValue>
+                                      </InArgument>
+                                    </p5:KeywordBasedClassifier.DocumentPath>
+                                    <p5:KeywordBasedClassifier.DocumentText>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <DelegateArgumentValue x:TypeArguments="x:String">
+                                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                                        </DelegateArgumentValue>
+                                      </InArgument>
+                                    </p5:KeywordBasedClassifier.DocumentText>
+                                    <p5:KeywordBasedClassifier.DocumentTypes>
+                                      <InArgument x:TypeArguments="p6:ClassifierDocumentType[]">
+                                        <DelegateArgumentValue x:TypeArguments="p6:ClassifierDocumentType[]">
+                                          <DelegateInArgument x:TypeArguments="p6:ClassifierDocumentType[]" Name="DocumentTypes" />
+                                        </DelegateArgumentValue>
+                                      </InArgument>
+                                    </p5:KeywordBasedClassifier.DocumentTypes>
+                                    <p5:KeywordBasedClassifier.PredictionId>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <DelegateArgumentValue x:TypeArguments="x:String">
+                                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                                        </DelegateArgumentValue>
+                                      </InArgument>
+                                    </p5:KeywordBasedClassifier.PredictionId>
+                                  </p5:KeywordBasedClassifier>
+                                </p5:ClassifyDocumentScope.Classifiers>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </p5:ClassifyDocumentScope>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:RetryScope.ActivityBody>
+                        <ui:RetryScope.Condition>
+                          <ActivityFunc x:TypeArguments="x:Boolean" />
+                        </ui:RetryScope.Condition>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:RetryScope>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt; is completed.&quot;]" />
                     </Sequence>
                   </FlowStep>
                 </FlowStep.Next>
