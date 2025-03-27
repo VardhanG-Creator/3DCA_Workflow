@@ -4,25 +4,23 @@
   "description": "3DCA Workflow",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.CefSharpBundle.NetCore": "[1.11.0]",
-    "UiPath.DocumentUnderstanding.Activities": "[2.12.1]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.31.2]",
     "UiPath.Excel.Activities": "[2.24.4]",
     "UiPath.FormActivityLibrary": "[2.0.8]",
     "UiPath.IntelligentOCR.Activities": "6.22.0",
-    "UiPath.Mail.Activities": "[1.24.2]",
+    "UiPath.Mail.Activities": "[1.24.13]",
     "UiPath.PDF.Activities": "[3.20.2]",
     "UiPath.Persistence.Activities": "[1.5.11]",
-    "UiPath.System.Activities": "[24.10.7]",
-    "UiPath.Testing.Activities": "[24.10.3]",
+    "UiPath.System.Activities": "[25.2.1]",
     "UiPath.UIAutomation.Activities": "[24.10.11]",
-    "UiPath.WebAPI.Activities": "[1.21.1]"
+    "UiPath.UIAutomation.Activities.Runtime": "[24.10.11]",
+    "UiPath.WebAPI.Activities.Runtime": "[1.21.1]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.2.1.0",
-  "projectVersion": "1.0.115",
+  "projectVersion": "1.0.126",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -54,12 +52,66 @@
     "fileInfoCollection": [],
     "saveToCloud": false
   },
+  "arguments": {
+    "input": [
+      {
+        "name": "in_OrchestratorQueueName",
+        "displayName": "in_OrchestratorQueueName",
+        "tooltip": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file.",
+        "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "in_OrchestratorQueueFolder",
+        "displayName": "in_OrchestratorQueueFolder",
+        "tooltip": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file.",
+        "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "Config",
+        "displayName": "Config",
+        "tooltip": "Dictionary structure to store configuration data of the process (settings, constants and assets).",
+        "type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": true
+      }
+    ],
+    "output": []
+  },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
       "uniqueId": "9f07f0ce-4c12-4db5-a64d-ad230acd5722",
-      "input": [],
+      "input": [
+        {
+          "name": "in_OrchestratorQueueName",
+          "displayName": "in_OrchestratorQueueName",
+          "tooltip": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file.",
+          "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "in_OrchestratorQueueFolder",
+          "displayName": "in_OrchestratorQueueFolder",
+          "tooltip": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file.",
+          "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "Config",
+          "displayName": "Config",
+          "tooltip": "Dictionary structure to store configuration data of the process (settings, constants and assets).",
+          "type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": true
+        }
+      ],
       "output": []
     }
   ],
