@@ -9,6 +9,7 @@
     <x:Property Name="out_extractionResultsStrJson" Type="OutArgument(x:String)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_str_currentPdfFile" Type="InArgument(x:String)" />
+    <x:Property Name="out_dtExportExcel" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -66,6 +67,7 @@
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -173,13 +175,16 @@
                 <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Convert Extracted Results to JSON" sap:VirtualizedContainerService.HintSize="496,668" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Convert Extracted Results to JSON" sap:VirtualizedContainerService.HintSize="894.6666666666666,3574" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="intccc" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <p3:ExportExtractionResults DataSet="[extractionResultDataSet]" DisplayName="Export Extraction Results" ExtractionResult="[validatedResults]" sap:VirtualizedContainerService.HintSize="434,222" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False">
+              <p3:ExportExtractionResults DataSet="[extractionResultDataSet]" DisplayName="Export Extraction Results" ExtractionResult="[validatedResults]" sap:VirtualizedContainerService.HintSize="832.6666666666666,222" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,7 +192,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </p3:ExportExtractionResults>
-              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[extractionResultDataSet.Tables(0)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Brief" StartingCell="A1" WorkbookPath="[&quot;C:\Users\ewong-c\Documents\UiPath\3DCA_Workflow\Data\BriefExport\&quot;+in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;_Brief.xlsx&quot;]">
+              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[extractionResultDataSet.Tables(0)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="832.6666666666666,156" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Brief" StartingCell="A1" WorkbookPath="[&quot;C:\Users\ewong-c\Documents\UiPath\3DCA_Workflow\Data\BriefExport\&quot;+in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;_Brief.xlsx&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -195,7 +200,81 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:WriteRange>
-              <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[out_dtExportExcel]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="832.6666666666666,94" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Brief" WorkbookPath="[&quot;C:\Users\ewong-c\Documents\UiPath\3DCA_Workflow\Data\BriefExport\&quot;+in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;_Brief.xlsx&quot;]">
+                <ui:ReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ReadRange.Range>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ReadRange>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="832.6666666666666,94" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,161.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intccc]" DataTable="[out_dtExportExcel]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,712.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[String.IsNullOrEmpty(CurrentRow.ToString)]" sap:VirtualizedContainerService.HintSize="450,628" sap2010:WorkflowViewState.IdRef="If_5">
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,364" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:RemoveDataColumn Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="[intccc]" DataTable="[out_dtExportExcel]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="354,231.33333333333334" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_2" />
+                                  <ui:Break sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Break_4" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <Assign sap:VirtualizedContainerService.HintSize="832.6666666666666,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[int_counterValue]</OutArgument>
                 </Assign.To>
@@ -203,7 +282,7 @@
                   <InArgument x:TypeArguments="x:Int32">0</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[int_counterValue&lt;=3]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="434,76.66666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[int_counterValue&lt;=3]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="832.6666666666666,2794.6666666666665" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                 <ui:InterruptibleDoWhile.Body>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="798.6666666666666,2656" sap2010:WorkflowViewState.IdRef="Sequence_36">
                     <sap:WorkflowViewStateService.ViewState>
@@ -404,7 +483,7 @@
                 </ui:InterruptibleDoWhile.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>

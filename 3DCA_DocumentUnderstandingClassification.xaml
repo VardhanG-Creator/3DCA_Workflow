@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,1280.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,1466</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DocumentUnderstandingClassification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -131,7 +131,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="734.6666666666666,1216" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="734.6666666666666,1401.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_isClassifyFailed" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isDigitizeFailed" />
@@ -141,21 +141,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="672.6666666666666,1105.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="672.6666666666666,1290.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Flowchart DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="634,819.3333333333334" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="DocumentUnderstandingClassification" sap:VirtualizedContainerService.HintSize="634,1004.6666666666666" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
               <av:Size x:Key="ShapeSize">60,74.66666666666667</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">300,77.16666666666667 300,137.29999999999998</av:PointCollection>
-              <x:Double x:Key="Height">781.8</x:Double>
+              <x:Double x:Key="Height">967.3333333333334</x:Double>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID6</x:Reference>
+            <x:Reference>__ReferenceID9</x:Reference>
           </Flowchart.StartNode>
           <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_4">
             <sap:WorkflowViewStateService.ViewState>
@@ -240,10 +240,10 @@
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">200,604</av:Point>
                         <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">390,781.8 390,811.8 390.1,811.8 390.1,826.5</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">300,688.6666666666666 300,738.6666666666666</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="540,954" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -257,7 +257,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <p5:ClassifyDocumentScope ClassificationResults="[out_classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,514" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.OpeningBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.OpeningBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.WendeBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.WendeBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Briefs.NoCategory.hjkhhk&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Briefs.NoCategory.hjkhhk&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.RespondentBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.RespondentBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:[]}}">
+                      <p5:ClassifyDocumentScope ClassificationResults="[out_classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[in_str_currentPdf]" DocumentText="[text]" sap:VirtualizedContainerService.HintSize="478,514" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.OpeningBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.OpeningBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.WendeBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.WendeBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Briefs.NoCategory.hjkhhk&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Briefs.NoCategory.hjkhhk&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;NoGroup.NoCategory.RespondentBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.RespondentBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Briefs.NoCategory.AppellantReplyBrief&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Briefs.NoCategory.AppellantReplyBrief&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI2a0caff00bcf4b48a017202a43cbd20b&quot;:[]}}">
                         <p5:ClassifyDocumentScope.Classifiers>
                           <p5:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="222.66666666666666,140" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\classifier.json" PersistenceId="UI2a0caff00bcf4b48a017202a43cbd20b">
                             <p5:KeywordBasedClassifier.ClassifierResult>
@@ -313,6 +313,189 @@
                       </p5:ClassifyDocumentScope>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Classifying document &lt;&quot; + Path.GetFileName(in_str_currentPdf) + &quot;&gt; is completed.&quot;]" />
                     </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">200,738.6666666666666</av:Point>
+                            <av:Size x:Key="ShapeSize">200,54</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">300,792.6666666666666 300,828.6666666666666</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[text.ToLower.Contains(&quot;wende&quot;) and text.ToLower.Contains(&quot;delgadillo&quot;)]" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="If_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[out_classificationResults(0).DocumentTypeId]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">Briefs.NoCategory.hjkhhk</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,632.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[text.ToLower.Contains(&quot;wende&quot;)]" sap:VirtualizedContainerService.HintSize="530,548" sap2010:WorkflowViewState.IdRef="If_2">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[out_classificationResults(0).DocumentTypeId]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">NoGroup.NoCategory.WendeBrief</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[out_classificationResults(0).DocumentTypeId]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">NoGroup.NoCategory.OpeningBrief</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">200,828.6666666666666</av:Point>
+                                <av:Size x:Key="ShapeSize">200,54</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">300,882.6666666666666 300,913.3333333333334</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[text.ToLower.Contains(&quot;reply brief&quot;)]" sap:VirtualizedContainerService.HintSize="626,874" sap2010:WorkflowViewState.IdRef="If_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[out_classificationResults(0).DocumentTypeId]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">Briefs.NoCategory.AppellantReplyBrief</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,541.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[text.ToLower.Contains(&quot;respondent’s brief&quot;)]" sap:VirtualizedContainerService.HintSize="530,456.6666666666667" sap2010:WorkflowViewState.IdRef="If_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[out_classificationResults(0).DocumentTypeId]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">NoGroup.NoCategory.RespondentBrief</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">200,913.3333333333334</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,54</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Modified ID:&quot; + out_classificationResults(0).DocumentTypeId]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:LogMessage>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowStep.Next>
                   </FlowStep>
                 </FlowStep.Next>
               </FlowStep>
@@ -340,7 +523,7 @@
           </FlowStep>
           <x:Reference>__ReferenceID3</x:Reference>
           <x:Reference>__ReferenceID4</x:Reference>
-          <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+          <FlowStep x:Name="__ReferenceID9" sap2010:WorkflowViewState.IdRef="FlowStep_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">200,137.29999999999998</av:Point>
@@ -359,6 +542,9 @@
               <x:Reference>__ReferenceID5</x:Reference>
             </FlowStep.Next>
           </FlowStep>
+          <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
+          <x:Reference>__ReferenceID8</x:Reference>
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
