@@ -1611,7 +1611,7 @@
         },
         {
           "FieldId": "Briefs.NoCategory.AppellantReplyBrief.TrailCourtCaseNumber",
-          "FieldName": "Trail Court Case Number",
+          "FieldName": "Trial Court Case Number",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",

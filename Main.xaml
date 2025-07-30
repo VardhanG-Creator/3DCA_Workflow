@@ -29,7 +29,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>854,807.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,807.3333333333334</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -379,7 +379,7 @@
                       </Assign>
                       <ui:BuildDataTable DataTable="[dt_SummaryResultData]" DisplayName="Build Data Table_dt_symmaryTable" sap:VirtualizedContainerService.HintSize="1352.6666666666667,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Exception_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Exception&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
                       <ui:BuildDataTable DataTable="[dt_fileStatusData]" DisplayName="Build Data Table_Dt_fileStatus" sap:VirtualizedContainerService.HintSize="1352.6666666666667,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Case_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Document_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Manual_x0020_Validation&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Stamp_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                      <TryCatch DisplayName="Try Catch - Process" sap:VirtualizedContainerService.HintSize="1352.6666666666667,3004.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                      <TryCatch DisplayName="Try Catch - Process" sap:VirtualizedContainerService.HintSize="1352.6666666666667,3044.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                         <TryCatch.Variables>
                           <Variable x:TypeArguments="x:String" Name="str_OriginalAccmsAttorneyInfo" />
                           <Variable x:TypeArguments="x:String" Name="str_extractedPhoneNumber" />
@@ -586,14 +586,14 @@
                                       <av:PointCollection x:Key="ConnectorLocation">350,1632.7533333333333 350,1696.0866666666666</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence sap2010:Annotation.AnnotationText="- BOT login to the ACCMS and extracts the info and Compare with the Extracted details from pdf.&#xA;- Then BOT goes to the OnBase application " DisplayName="ACCMS and Comparision with pdf info" sap:VirtualizedContainerService.HintSize="200,196.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_382">
+                                  <Sequence sap2010:Annotation.AnnotationText="- BOT login to the ACCMS and extracts the info and Compare with the Extracted details from pdf.&#xA;- Then BOT goes to the OnBase application " DisplayName="ACCMS and Comparision with pdf info" sap:VirtualizedContainerService.HintSize="788.6666666666666,5096.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_382">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="688,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_101">
+                                    <Assign sap:VirtualizedContainerService.HintSize="726.6666666666666,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_101">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Int32">[int_accmsCounter]</OutArgument>
                                       </Assign.To>
@@ -601,7 +601,7 @@
                                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ACCMS application" Condition="[bool_accmsPageOpen&lt;&gt;True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="688,124.66666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="ACCMS application" Condition="[bool_accmsPageOpen&lt;&gt;True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="726.6666666666666,124.66666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                                       <ui:InterruptibleDoWhile.Body>
                                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="516.6666666666666,451.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_432">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -1215,15 +1215,15 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InterruptibleDoWhile>
-                                    <Sequence DisplayName="Match Information" sap:VirtualizedContainerService.HintSize="688,2450" sap2010:WorkflowViewState.IdRef="Sequence_146">
+                                    <Sequence DisplayName="Match Information" sap:VirtualizedContainerService.HintSize="726.6666666666666,4554" sap2010:WorkflowViewState.IdRef="Sequence_146">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="547.3333333333334,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_260" Level="Info" Message="[&quot;BOT Strarted comparing extracted Doc info with Accms info&quot;]" />
-                                      <ui:IfElseIf DisplayName="Else If - Case Number?" sap:VirtualizedContainerService.HintSize="547.3333333333334,94" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664.6666666666666,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_260" Level="Info" Message="[&quot;BOT Strarted comparing extracted Doc info with Accms info&quot;]" />
+                                      <ui:IfElseIf DisplayName="Else If - Case Number?" sap:VirtualizedContainerService.HintSize="664.6666666666666,94" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                                         <ui:IfElseIf.ConditionBlocks>
                                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                             <ui:IfElseIfBlock BlockType="If" Condition="[accmsCaseNumber.Contains(Dict_docFieldsDict(&quot;Case Number&quot;).ToString())]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
@@ -1305,7 +1305,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:IfElseIf>
-                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="extractedCaseTitle = Regex.Replace(extractedCaseTitle, &quot;\t|\n|\r&quot;, &quot; &quot;)&#xA;cleanedExtractedCaseTitle = String.Join(&quot; &quot;, extractedCaseTitle.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries))&#xA;Dim cleanedCaseTitleArr As String() = cleanedExtractedCaseTitle.Split(&quot;,&quot;)&#xA;cleanedExtractedCaseTitle = cleanedExtractedCaseTitle.Replace(cleanedCaseTitleArr(0), &quot;THE PEOPLE&quot;)" DisplayName="Invoke Code - Case Title" sap:VirtualizedContainerService.HintSize="547.3333333333334,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_10">
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="extractedCaseTitle = Regex.Replace(extractedCaseTitle, &quot;\t|\n|\r&quot;, &quot; &quot;)&#xA;cleanedExtractedCaseTitle = String.Join(&quot; &quot;, extractedCaseTitle.Split(&quot; &quot;, StringSplitOptions.RemoveEmptyEntries))&#xA;Dim cleanedCaseTitleArr As String() = cleanedExtractedCaseTitle.Split(&quot;,&quot;)&#xA;cleanedExtractedCaseTitle = cleanedExtractedCaseTitle.Replace(cleanedCaseTitleArr(0), &quot;THE PEOPLE&quot;)" DisplayName="Invoke Code - Case Title" sap:VirtualizedContainerService.HintSize="664.6666666666666,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_10">
                                         <ui:InvokeCode.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="extractedCaseTitle">[Dict_docFieldsDict("Case Heading").ToString()]</InArgument>
                                           <OutArgument x:TypeArguments="x:String" x:Key="cleanedExtractedCaseTitle">[extractedCaseTitle]</OutArgument>
@@ -1317,7 +1317,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeCode>
-                                      <Assign sap:VirtualizedContainerService.HintSize="547.3333333333334,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_105">
+                                      <Assign sap:VirtualizedContainerService.HintSize="664.6666666666666,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_105">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[extractedCaseTitle]</OutArgument>
                                         </Assign.To>
@@ -1325,7 +1325,7 @@
                                           <InArgument x:TypeArguments="x:String">[extractedCaseTitle.Replace(",","").Replace(".","")]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign sap:VirtualizedContainerService.HintSize="547.3333333333334,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_106">
+                                      <Assign sap:VirtualizedContainerService.HintSize="664.6666666666666,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_106">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[accmsCaseTitle]</OutArgument>
                                         </Assign.To>
@@ -1333,7 +1333,7 @@
                                           <InArgument x:TypeArguments="x:String">[accmsCaseTitle.Replace(",","").Replace(".","")]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <If Condition="[extractedCaseTitle.ToString.ToLower.Trim.Equals(accmsCaseTitle.ToString.ToLower.Trim) or extractedCaseTitle.ToString.ToLower.Trim.Contains(accmsCaseTitle.ToString.ToLower.Trim) or accmsCaseTitle.ToString.ToLower.Trim.Contains(extractedCaseTitle.ToString.ToLower.Trim)]" DisplayName="If - accmsCaseTitle" sap:VirtualizedContainerService.HintSize="547.3333333333334,94" sap2010:WorkflowViewState.IdRef="If_24">
+                                      <If Condition="[extractedCaseTitle.ToString.ToLower.Trim.Equals(accmsCaseTitle.ToString.ToLower.Trim) or extractedCaseTitle.ToString.ToLower.Trim.Contains(accmsCaseTitle.ToString.ToLower.Trim) or accmsCaseTitle.ToString.ToLower.Trim.Contains(extractedCaseTitle.ToString.ToLower.Trim)]" DisplayName="If - accmsCaseTitle" sap:VirtualizedContainerService.HintSize="664.6666666666666,94" sap2010:WorkflowViewState.IdRef="If_24">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1512,15 +1512,15 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <TryCatch DisplayName="Train court case number" sap:VirtualizedContainerService.HintSize="547.3333333333334,94" sap2010:WorkflowViewState.IdRef="TryCatch_53">
+                                      <TryCatch DisplayName="Train court case number" sap:VirtualizedContainerService.HintSize="664.6666666666666,2198" sap2010:WorkflowViewState.IdRef="TryCatch_53">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <TryCatch.Try>
-                                          <If Condition="[Dict_docFieldsDict(&quot;Trail Court Case Number&quot;).ToString.ToLower.Trim.Contains(accmsLCCNumber.ToString.ToLower.Trim)]" DisplayName="If - accmsLCCNumber?" sap:VirtualizedContainerService.HintSize="626,1895.3333333333333" sap2010:WorkflowViewState.IdRef="If_25">
+                                          <If Condition="[Dict_docFieldsDict(&quot;Trial Court Case Number&quot;).ToString.ToLower.Trim.Contains(accmsLCCNumber.ToString.ToLower.Trim)]" DisplayName="If - accmsLCCNumber?" sap:VirtualizedContainerService.HintSize="626,1895.3333333333333" sap2010:WorkflowViewState.IdRef="If_25">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1561,7 +1561,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:LogMessage>
-                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_297" Level="Info" Message="[&quot;Extracted Value: (&quot;+Dict_docFieldsDict(&quot;Trail Court Case Number&quot;).ToString.ToLower.Trim+&quot;)&quot;+Environment.NewLine+&quot;Accms Value: (&quot;+accmsLCCNumber.ToString.ToLower.Trim+&quot;)&quot;]" />
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_297" Level="Info" Message="[&quot;Extracted Value: (&quot;+Dict_docFieldsDict(&quot;Trial Court Case Number&quot;).ToString.ToLower.Trim+&quot;)&quot;+Environment.NewLine+&quot;Accms Value: (&quot;+accmsLCCNumber.ToString.ToLower.Trim+&quot;)&quot;]" />
                                                 <If Condition="[MissMatchData=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="530,1049.3333333333333" sap2010:WorkflowViewState.IdRef="If_38">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1581,7 +1581,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[MissMatchData]</OutArgument>
                                                         </Assign.To>
                                                         <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:String">["Trail Court Case Number:"+"{0}"+"Validation Station value: ("+Dict_docFieldsDict("Trail Court Case Number").ToString.ToLower.Trim+")"+"{0}"+"Extracted ACCMS value: ("+accmsLCCNumber.ToString.ToLower.Trim+")"]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String">["Trial Court Case Number:"+"{0}"+"Validation Station value: ("+Dict_docFieldsDict("Trial Court Case Number").ToString.ToLower.Trim+")"+"{0}"+"Extracted ACCMS value: ("+accmsLCCNumber.ToString.ToLower.Trim+")"]</InArgument>
                                                         </Assign.Value>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1595,7 +1595,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[str_LLCNumberValidationValue]</OutArgument>
                                                         </Assign.To>
                                                         <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:String">[Dict_docFieldsDict("Trail Court Case Number").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String">[Dict_docFieldsDict("Trial Court Case Number").ToString]</InArgument>
                                                         </Assign.Value>
                                                       </Assign>
                                                       <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_263">
@@ -1620,7 +1620,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[MissMatchData]</OutArgument>
                                                         </Assign.To>
                                                         <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:String">[MissMatchData+"{0}"+"Trail Court Case Number:"+"{0}"+"Validation Station value: ("+Dict_docFieldsDict("Trail Court Case Number").ToString.ToLower.Trim+")"+"{0}"+"Extracted ACCMS value: ("+accmsLCCNumber.ToString.ToLower.Trim+")"]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String">[MissMatchData+"{0}"+"Trial Court Case Number:"+"{0}"+"Validation Station value: ("+Dict_docFieldsDict("Trial Court Case Number").ToString.ToLower.Trim+")"+"{0}"+"Extracted ACCMS value: ("+accmsLCCNumber.ToString.ToLower.Trim+")"]</InArgument>
                                                         </Assign.Value>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1634,7 +1634,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[str_LLCNumberValidationValue]</OutArgument>
                                                         </Assign.To>
                                                         <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:String">[Dict_docFieldsDict("Trail Court Case Number").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String">[Dict_docFieldsDict("Trial Court Case Number").ToString]</InArgument>
                                                         </Assign.Value>
                                                       </Assign>
                                                       <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_241">
@@ -1664,218 +1664,13 @@
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                               </ActivityAction.Argument>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="416,161.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1493">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1493">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                                  <ui:CommentOut.Body>
-                                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,161.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1504">
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExportExcel]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-                                                        <ui:ForEachRow.Body>
-                                                          <ActivityAction x:TypeArguments="sd:DataRow">
-                                                            <ActivityAction.Argument>
-                                                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                                                            </ActivityAction.Argument>
-                                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,1569.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1492">
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                              <If Condition="[CurrentRow.ToString.Trim.ToLower=&quot;trial court case number&quot;]" sap:VirtualizedContainerService.HintSize="530,539.3333333333334" sap2010:WorkflowViewState.IdRef="If_305">
-                                                                <sap:WorkflowViewStateService.ViewState>
-                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                  </scg:Dictionary>
-                                                                </sap:WorkflowViewStateService.ViewState>
-                                                                <If.Then>
-                                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,258" sap2010:WorkflowViewState.IdRef="Sequence_1494">
-                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                      </scg:Dictionary>
-                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                    <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_402">
-                                                                      <Assign.To>
-                                                                        <OutArgument x:TypeArguments="x:String">[str_trainCourtCN]</OutArgument>
-                                                                      </Assign.To>
-                                                                      <Assign.Value>
-                                                                        <InArgument x:TypeArguments="x:String">[CurrentRow.ToString]</InArgument>
-                                                                      </Assign.Value>
-                                                                    </Assign>
-                                                                    <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_22" />
-                                                                  </Sequence>
-                                                                </If.Then>
-                                                                <If.Else>
-                                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1495">
-                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                      </scg:Dictionary>
-                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                  </Sequence>
-                                                                </If.Else>
-                                                              </If>
-                                                              <If Condition="[str_trainCourtCN.ToString.ToLower.Trim.Contains(accmsLCCNumber.ToString.ToLower.Trim)]" DisplayName="If - accmsLCCNumber?" sap:VirtualizedContainerService.HintSize="530,945.3333333333334" sap2010:WorkflowViewState.IdRef="If_303">
-                                                                <sap:WorkflowViewStateService.ViewState>
-                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  </scg:Dictionary>
-                                                                </sap:WorkflowViewStateService.ViewState>
-                                                                <If.Then>
-                                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_1488">
-                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                      </scg:Dictionary>
-                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_525" Level="Info" Message="[&quot;MATCHED: Trial Court Case Number1&quot;]">
-                                                                      <sap:WorkflowViewStateService.ViewState>
-                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                        </scg:Dictionary>
-                                                                      </sap:WorkflowViewStateService.ViewState>
-                                                                    </ui:LogMessage>
-                                                                  </Sequence>
-                                                                </If.Then>
-                                                                <If.Else>
-                                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,530.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1491">
-                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                      </scg:Dictionary>
-                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_526" Level="Info" Message="[&quot;Trial Court Case Number Mismatched. Creating External Task for Manual Review...1&quot;]">
-                                                                      <sap:WorkflowViewStateService.ViewState>
-                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                        </scg:Dictionary>
-                                                                      </sap:WorkflowViewStateService.ViewState>
-                                                                    </ui:LogMessage>
-                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_527" Level="Info" Message="[&quot;Extracted Value: (&quot;+str_trainCourtCN.ToString.ToLower.Trim+&quot;)&quot;+Environment.NewLine+&quot;Accms Value: (&quot;+accmsLCCNumber.ToString.ToLower.Trim+&quot;)&quot;]" />
-                                                                    <If Condition="[MissMatchData=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="If_304">
-                                                                      <sap:WorkflowViewStateService.ViewState>
-                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                        </scg:Dictionary>
-                                                                      </sap:WorkflowViewStateService.ViewState>
-                                                                      <If.Then>
-                                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,443.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1489">
-                                                                          <sap:WorkflowViewStateService.ViewState>
-                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            </scg:Dictionary>
-                                                                          </sap:WorkflowViewStateService.ViewState>
-                                                                          <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_396">
-                                                                            <Assign.To>
-                                                                              <OutArgument x:TypeArguments="x:String">[MissMatchData]</OutArgument>
-                                                                            </Assign.To>
-                                                                            <Assign.Value>
-                                                                              <InArgument x:TypeArguments="x:String">["Trial Court Case Number:"+"{0}"+"Validation Station value: ("+Dict_docFieldsDict("Trial Court Case Number").ToString.ToLower.Trim+")"+"{0}"+"Extracted ACCMS value: ("+accmsLCCNumber.ToString.ToLower.Trim+")"]</InArgument>
-                                                                            </Assign.Value>
-                                                                            <sap:WorkflowViewStateService.ViewState>
-                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                              </scg:Dictionary>
-                                                                            </sap:WorkflowViewStateService.ViewState>
-                                                                          </Assign>
-                                                                          <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_397">
-                                                                            <Assign.To>
-                                                                              <OutArgument x:TypeArguments="x:String">[str_LLCNumberValidationValue]</OutArgument>
-                                                                            </Assign.To>
-                                                                            <Assign.Value>
-                                                                              <InArgument x:TypeArguments="x:String">[str_trainCourtCN.ToString]</InArgument>
-                                                                            </Assign.Value>
-                                                                          </Assign>
-                                                                          <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_398">
-                                                                            <Assign.To>
-                                                                              <OutArgument x:TypeArguments="x:String">[str_LLCNumberAccmsValue]</OutArgument>
-                                                                            </Assign.To>
-                                                                            <Assign.Value>
-                                                                              <InArgument x:TypeArguments="x:String">[accmsLCCNumber.ToString]</InArgument>
-                                                                            </Assign.Value>
-                                                                          </Assign>
-                                                                        </Sequence>
-                                                                      </If.Then>
-                                                                      <If.Else>
-                                                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,443.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1490">
-                                                                          <sap:WorkflowViewStateService.ViewState>
-                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            </scg:Dictionary>
-                                                                          </sap:WorkflowViewStateService.ViewState>
-                                                                          <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_399">
-                                                                            <Assign.To>
-                                                                              <OutArgument x:TypeArguments="x:String">[MissMatchData]</OutArgument>
-                                                                            </Assign.To>
-                                                                            <Assign.Value>
-                                                                              <InArgument x:TypeArguments="x:String">[MissMatchData+"{0}"+"Trial Court Case Number:"+"{0}"+"Validation Station value: ("+str_trainCourtCN.ToString.ToLower.Trim+")"+"{0}"+"Extracted ACCMS value: ("+accmsLCCNumber.ToString.ToLower.Trim+")"]</InArgument>
-                                                                            </Assign.Value>
-                                                                            <sap:WorkflowViewStateService.ViewState>
-                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                              </scg:Dictionary>
-                                                                            </sap:WorkflowViewStateService.ViewState>
-                                                                          </Assign>
-                                                                          <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_400">
-                                                                            <Assign.To>
-                                                                              <OutArgument x:TypeArguments="x:String">[str_LLCNumberValidationValue]</OutArgument>
-                                                                            </Assign.To>
-                                                                            <Assign.Value>
-                                                                              <InArgument x:TypeArguments="x:String">[str_trainCourtCN.ToString]</InArgument>
-                                                                            </Assign.Value>
-                                                                          </Assign>
-                                                                          <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_401">
-                                                                            <Assign.To>
-                                                                              <OutArgument x:TypeArguments="x:String">[str_LLCNumberAccmsValue]</OutArgument>
-                                                                            </Assign.To>
-                                                                            <Assign.Value>
-                                                                              <InArgument x:TypeArguments="x:String">[accmsLCCNumber.ToString]</InArgument>
-                                                                            </Assign.Value>
-                                                                          </Assign>
-                                                                        </Sequence>
-                                                                      </If.Else>
-                                                                    </If>
-                                                                  </Sequence>
-                                                                </If.Else>
-                                                              </If>
-                                                            </Sequence>
-                                                          </ActivityAction>
-                                                        </ui:ForEachRow.Body>
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                      </ui:ForEachRow>
-                                                    </Sequence>
-                                                  </ui:CommentOut.Body>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </ui:CommentOut>
                                               </Sequence>
                                             </ActivityAction>
                                           </Catch>
@@ -1902,7 +1697,7 @@
                                           </Catch>
                                         </TryCatch.Catches>
                                       </TryCatch>
-                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="judgeName = judgeName.Replace(&quot;,&quot;, &quot;&quot;)&#xA;Dim judgeNameArray As String() = judgeName.Split(&quot; &quot;)&#xA;Array.Sort(judgeNameArray)&#xA;cleanedJudgeName = String.Join(&quot; &quot;, judgeNameArray)" DisplayName="Invoke Code - Judge Name" sap:VirtualizedContainerService.HintSize="547.3333333333334,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_11">
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="judgeName = judgeName.Replace(&quot;,&quot;, &quot;&quot;)&#xA;Dim judgeNameArray As String() = judgeName.Split(&quot; &quot;)&#xA;Array.Sort(judgeNameArray)&#xA;cleanedJudgeName = String.Join(&quot; &quot;, judgeNameArray)" DisplayName="Invoke Code - Judge Name" sap:VirtualizedContainerService.HintSize="664.6666666666666,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_11">
                                         <ui:InvokeCode.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="judgeName">[Dict_docFieldsDict("Judge").ToString()]</InArgument>
                                           <OutArgument x:TypeArguments="x:String" x:Key="cleanedJudgeName">[extractedJudgeName]</OutArgument>
@@ -1914,7 +1709,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeCode>
-                                      <If Condition="[accmsLCJudgeName.ToString.ToLower.Trim.Contains(extractedJudgeName.ToString.ToLower.Trim) or extractedJudgeName.ToString.ToLower.Trim.Contains(accmsLCJudgeName.ToString.ToLower.Trim)]" DisplayName="If - extractedJudgeName" sap:VirtualizedContainerService.HintSize="547.3333333333334,94" sap2010:WorkflowViewState.IdRef="If_26">
+                                      <If Condition="[accmsLCJudgeName.ToString.ToLower.Trim.Contains(extractedJudgeName.ToString.ToLower.Trim) or extractedJudgeName.ToString.ToLower.Trim.Contains(accmsLCJudgeName.ToString.ToLower.Trim)]" DisplayName="If - extractedJudgeName" sap:VirtualizedContainerService.HintSize="664.6666666666666,94" sap2010:WorkflowViewState.IdRef="If_26">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2090,7 +1885,7 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim extractedAttorneyNameArray As String() = extractedAttorneyName.Split(&quot; &quot;)&#xA;Dim hasMatched As Boolean = False&#xA;For Each name As String In extractedAttorneyNameArray&#xA;&#x9;If accmsAttorneyInfo.IndexOf(name, StringComparison.CurrentCultureIgnoreCase) &gt;= 0 Then&#xA;&#x9;&#x9;hasMatched = True&#xA;&#x9;Else&#xA;&#x9;&#x9;hasMatched = False&#xA;&#x9;End If&#xA;Next&#xA;matchedNames = hasMatched" DisplayName="Invoke Code checking for Attorney Name match" sap:VirtualizedContainerService.HintSize="547.3333333333334,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_12">
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim extractedAttorneyNameArray As String() = extractedAttorneyName.Split(&quot; &quot;)&#xA;Dim hasMatched As Boolean = False&#xA;For Each name As String In extractedAttorneyNameArray&#xA;&#x9;If accmsAttorneyInfo.IndexOf(name, StringComparison.CurrentCultureIgnoreCase) &gt;= 0 Then&#xA;&#x9;&#x9;hasMatched = True&#xA;&#x9;Else&#xA;&#x9;&#x9;hasMatched = False&#xA;&#x9;End If&#xA;Next&#xA;matchedNames = hasMatched" DisplayName="Invoke Code checking for Attorney Name match" sap:VirtualizedContainerService.HintSize="664.6666666666666,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_12">
                                         <ui:InvokeCode.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="accmsAttorneyInfo">[accmsAttorneyInfo]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="extractedAttorneyName">[Dict_docFieldsDict("Attorney Name").ToString()]</InArgument>
@@ -2103,7 +1898,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeCode>
-                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Define the inputs&#xA;' Normalize the inputs (convert to lowercase and remove special characters)&#xA;Dim separators As Char() = {&quot; &quot;c, &quot;,&quot;c, &quot;-&quot;c, &quot;.&quot;c}&#xA;Dim briefWords As String() = briefInfo.ToLower().Split(separators, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim accmsWords As String() = accmsInfo.ToLower().Split(separators, StringSplitOptions.RemoveEmptyEntries)&#xA;&#xA;' Print the arrays&#xA;Console.WriteLine(&quot;briefWords: &quot; &amp; String.Join(&quot;, &quot;, briefWords))&#xA;Console.WriteLine(&quot;accmsWords: &quot; &amp; String.Join(&quot;, &quot;, accmsWords))&#xA;&#xA;' Initialize match count&#xA;Dim matches As Integer = 0&#xA;&#xA;' Compare each word from briefInfo with words in accmsInfo&#xA;For Each word In briefWords&#xA;    If accmsWords.Contains(word.Trim()) Then&#xA;        matches += 1&#xA;        Console.WriteLine(&quot;Match found: &quot; &amp; word)&#xA;    Else&#xA;        Console.WriteLine(&quot;No match for: &quot; &amp; word)&#xA;    End If&#xA;Next&#xA;&#xA;' Calculate the matching percentage&#xA;Dim totalWords As Integer = briefWords.Length&#xA;Console.WriteLine(&quot;Total words in briefInfo: &quot; &amp; totalWords)&#xA;Console.WriteLine(&quot;Total matches found: &quot; &amp; matches)&#xA;Dim percentage As Double = (matches / totalWords) * 100&#xA;Console.WriteLine(&quot;Total Percentage: &quot; &amp; percentage)&#xA;' Output the result&#xA;matchingPercentage = percentage&#xA;" DisplayName="Invoke Code checking for Attorney Name match %" sap:VirtualizedContainerService.HintSize="547.3333333333334,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_37">
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Define the inputs&#xA;' Normalize the inputs (convert to lowercase and remove special characters)&#xA;Dim separators As Char() = {&quot; &quot;c, &quot;,&quot;c, &quot;-&quot;c, &quot;.&quot;c}&#xA;Dim briefWords As String() = briefInfo.ToLower().Split(separators, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim accmsWords As String() = accmsInfo.ToLower().Split(separators, StringSplitOptions.RemoveEmptyEntries)&#xA;&#xA;' Print the arrays&#xA;Console.WriteLine(&quot;briefWords: &quot; &amp; String.Join(&quot;, &quot;, briefWords))&#xA;Console.WriteLine(&quot;accmsWords: &quot; &amp; String.Join(&quot;, &quot;, accmsWords))&#xA;&#xA;' Initialize match count&#xA;Dim matches As Integer = 0&#xA;&#xA;' Compare each word from briefInfo with words in accmsInfo&#xA;For Each word In briefWords&#xA;    If accmsWords.Contains(word.Trim()) Then&#xA;        matches += 1&#xA;        Console.WriteLine(&quot;Match found: &quot; &amp; word)&#xA;    Else&#xA;        Console.WriteLine(&quot;No match for: &quot; &amp; word)&#xA;    End If&#xA;Next&#xA;&#xA;' Calculate the matching percentage&#xA;Dim totalWords As Integer = briefWords.Length&#xA;Console.WriteLine(&quot;Total words in briefInfo: &quot; &amp; totalWords)&#xA;Console.WriteLine(&quot;Total matches found: &quot; &amp; matches)&#xA;Dim percentage As Double = (matches / totalWords) * 100&#xA;Console.WriteLine(&quot;Total Percentage: &quot; &amp; percentage)&#xA;' Output the result&#xA;matchingPercentage = percentage&#xA;" DisplayName="Invoke Code checking for Attorney Name match %" sap:VirtualizedContainerService.HintSize="664.6666666666666,205.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_37">
                                         <ui:InvokeCode.Arguments>
                                           <OutArgument x:TypeArguments="x:Double" x:Key="matchingPercentage">[matchingPercentage]</OutArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="briefInfo">[Dict_docFieldsDict("Attorney Name").ToString()]</InArgument>
@@ -2865,7 +2660,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">250,2008.3333333333333 250,2068.333333333333</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence sap2010:Annotation.AnnotationText="Bot goes to the Onbase, Update the Code filing, Accept filing and Complete Filing for the current document" DisplayName="Onbase filing" sap:VirtualizedContainerService.HintSize="954.6666666666666,5052.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_438">
+                                          <Sequence sap2010:Annotation.AnnotationText="Bot goes to the Onbase, Update the Code filing, Accept filing and Complete Filing for the current document" DisplayName="Onbase filing" sap:VirtualizedContainerService.HintSize="200,180" sap2010:WorkflowViewState.IdRef="Sequence_438">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="sd:DataTable" Name="dt_BriefExport" />
                                               <Variable x:TypeArguments="x:String" Name="str_stampDateFromDt" />
@@ -4876,7 +4671,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">550,1821.6666666666665 550,1871.6666666666665</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence sap2010:Annotation.AnnotationText="BOT creates the External task and wait for Action in the Action Center for Miss match data " DisplayName="MissMatch Data Validation in Action Center" sap:VirtualizedContainerService.HintSize="200,163.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_267">
+                                          <Sequence sap2010:Annotation.AnnotationText="BOT creates the External task and wait for Action in the Action Center for Miss match data " DisplayName="MissMatch Data Validation in Action Center" sap:VirtualizedContainerService.HintSize="496,1206" sap2010:WorkflowViewState.IdRef="Sequence_267">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="upaf:FormTaskData" Name="FormTaskObject" />
                                               <Variable x:TypeArguments="upaf:FormTaskData" Name="FormTaskObjectOutput" />
@@ -4937,7 +4732,7 @@
                                                 </Sequence>
                                               </If.Else>
                                             </If>
-                                            <upaf:CreateFormTask BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Labels="{x:Null}" TaskCatalog="{x:Null}" TimeoutMs="{x:Null}" BulkFormLayoutGuid="da95b51b-0121-495b-bfd1-3177b419058b" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="True" FolderPath="[in_OrchestratorQueueFolder]" FormLayout="%[{&quot;title&quot;:&quot;Case Number&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseNumber1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseNumber2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns1&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Case Title&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel2&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Trail Court Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseTitle1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseTitle2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns3&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Trail Court Case Number&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel1&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;TrailCourtCaseNumber1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;TrailCourtCaseNumber2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns2&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Judge Name&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel4&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Trail Court Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;JudgeName1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;JudgeName2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns5&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Attorney Name&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel5&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Address&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyName1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyName2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns6&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;title&quot;:&quot;Address&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel3&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Case Title&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Address1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Address2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns4&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}],&quot;hideOnChildrenHidden&quot;:false},{&quot;title&quot;:&quot;Attorney Phone Number&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel6&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Address&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyPhoneNumber1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyPhoneNumber2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns7&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}],&quot;hideOnChildrenHidden&quot;:false},{&quot;title&quot;:&quot;Attorney Email&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel7&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Attorney Phone Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyEmail1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyEmail2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns8&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}],&quot;hideOnChildrenHidden&quot;:false}]},{&quot;label&quot;:&quot;Submit&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]" FormLayoutGuid="847c726f-19a3-4a66-ba37-80a809b096f0" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="434,376" sap2010:WorkflowViewState.IdRef="CreateFormTask_2" TaskOutput="[FormTaskObject]" TaskPriority="Medium" TaskTitle="[&quot;Review and confirm document comparison values for Case Number: (&quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;)&quot;]">
+                                            <upaf:CreateFormTask BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Labels="{x:Null}" TaskCatalog="{x:Null}" TimeoutMs="{x:Null}" BulkFormLayoutGuid="7aacf9aa-60a7-48e6-b5c5-82f9dc642b57" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="True" FolderPath="[in_OrchestratorQueueFolder]" FormLayout="%[{&quot;title&quot;:&quot;Case Number&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseNumber1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseNumber2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns1&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Case Title&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel2&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Trail Court Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseTitle1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;CaseTitle2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns3&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Trail Court Case Number&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel1&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;TrailCourtCaseNumber1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;TrailCourtCaseNumber2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns2&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Judge Name&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel4&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Trail Court Case Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;JudgeName1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;JudgeName2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:1,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns5&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}]},{&quot;title&quot;:&quot;Attorney Name&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel5&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Address&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyName1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyName2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns6&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;title&quot;:&quot;Address&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel3&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Case Title&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Address1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Address2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns4&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}],&quot;hideOnChildrenHidden&quot;:false},{&quot;title&quot;:&quot;Attorney Phone Number&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel6&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Address&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyPhoneNumber1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyPhoneNumber2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns7&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}],&quot;hideOnChildrenHidden&quot;:false},{&quot;title&quot;:&quot;Attorney Email&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel7&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Attorney Phone Number&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Validation Station Value&quot;,&quot;placeholder&quot;:&quot;Match Found&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyEmail1&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;ACCMS Value&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;AttorneyEmail2&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns8&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;}],&quot;hideOnChildrenHidden&quot;:false}]},{&quot;label&quot;:&quot;Submit&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]" FormLayoutGuid="ab92a02a-b0c8-4877-9870-f7cf187cea59" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="434,376" sap2010:WorkflowViewState.IdRef="CreateFormTask_2" TaskOutput="[FormTaskObject]" TaskPriority="Medium" TaskTitle="[&quot;Review and confirm document comparison values for Case Number: (&quot;+TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString+&quot;)&quot;]">
                                               <upaf:CreateFormTask.FormData>
                                                 <InArgument x:TypeArguments="x:String" x:Key="CaseNumber1">[str_CaseNumberValidationValue]</InArgument>
                                                 <InArgument x:TypeArguments="x:String" x:Key="CaseNumber2">[str_CaseNumberACCMSValue]</InArgument>
@@ -6142,7 +5937,7 @@
                                             </FlowStep>
                                           </FlowDecision.True>
                                           <FlowDecision.False>
-                                            <FlowStep x:Name="__ReferenceID40">
+                                            <FlowStep x:Name="__ReferenceID40" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">648.6666666666666,1203.3333333333333</av:Point>
@@ -6169,7 +5964,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <FlowDecision.True>
-                                                    <FlowStep x:Name="__ReferenceID41">
+                                                    <FlowStep x:Name="__ReferenceID41" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">469.33333333333326,1316.333333333333</av:Point>
@@ -6185,7 +5980,7 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </ui:LogMessage>
                                                       <FlowStep.Next>
-                                                        <FlowStep x:Name="__ReferenceID6">
+                                                        <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">470,1437.6666666666667</av:Point>
@@ -6206,7 +6001,7 @@
                                                     </FlowStep>
                                                   </FlowDecision.True>
                                                   <FlowDecision.False>
-                                                    <FlowStep x:Name="__ReferenceID42">
+                                                    <FlowStep x:Name="__ReferenceID42" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">830,1297.6666666666667</av:Point>
@@ -6282,7 +6077,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <FlowDecision.False>
-                                                            <FlowStep x:Name="__ReferenceID43">
+                                                            <FlowStep x:Name="__ReferenceID43" sap2010:WorkflowViewState.IdRef="FlowStep_5">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <av:Point x:Key="ShapeLocation">910,1438.3333333333333</av:Point>
