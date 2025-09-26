@@ -324,7 +324,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">460,341.1666666666667 460,381.5333333333333</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Get OnBase File Path" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_232">
+            <Sequence DisplayName="Get OnBase File Path" sap:VirtualizedContainerService.HintSize="608,2390" sap2010:WorkflowViewState.IdRef="Sequence_232">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sco:Collection(sd1:Process)" Name="processes" />
                 <Variable x:TypeArguments="ss:SecureString" Name="secure_password" />
@@ -334,10 +334,10 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[in_Config(&quot;Environment&quot;).ToString=&quot;Dev&quot;]" DisplayName="Launching Onbase " sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="If_136">
+              <If Condition="[in_Config(&quot;Environment&quot;).ToString=&quot;Dev&quot;]" DisplayName="Launching Onbase " sap:VirtualizedContainerService.HintSize="546,1999.3333333333333" sap2010:WorkflowViewState.IdRef="If_136">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -380,13 +380,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,505.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1002">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,1314" sap2010:WorkflowViewState.IdRef="Sequence_1002">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_283" Level="Info" Message="[&quot;Launching Onbase application in Prod Environment&quot;]">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_283" Level="Info" Message="[&quot;Launching Onbase application in Prod Environment&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -394,7 +394,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), &quot;Hyland&quot;, in_Config(&quot;LaunchOnbase_Prod&quot;).ToString+&quot;.appref-ms&quot;)]" sap:VirtualizedContainerService.HintSize="434,128" sap2010:WorkflowViewState.IdRef="StartProcess_8">
+                    <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), &quot;Hyland&quot;, in_Config(&quot;LaunchOnbase_Prod&quot;).ToString+&quot;.appref-ms&quot;)]" sap:VirtualizedContainerService.HintSize="450,128" sap2010:WorkflowViewState.IdRef="StartProcess_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -402,7 +402,42 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:StartProcess>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_71">
+                    <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: Program Manager" sap:VirtualizedContainerService.HintSize="450,808.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_66" OpenMode="Never" ScopeGuid="337c331f-2d5d-4d25-bb4e-3024dc7d3251" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,471.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1148">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Hyland Unity Client [Pr…'" sap:VirtualizedContainerService.HintSize="354,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_292" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="337c331f-2d5d-4d25-bb4e-3024dc7d3251" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="448, 491, 112, 129" DesignTimeScaleFactor="1.5" ElementType="ListItem" FullSelectorArgument="&lt;wnd title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='Hyland Unity Client [ProdJCCSSO]' role='list item' text='Hyland Unity Client [ProdJCCSSO]' /&gt;" Guid="04ef4f6d-41b8-4304-85ba-de35352d76a4" InformativeScreenshot="b40ee724301d9b11306e8ee107a0b766.png" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Hyland Unity Client [Pr…'" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_293" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="337c331f-2d5d-4d25-bb4e-3024dc7d3251" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="448, 491, 112, 129" DesignTimeScaleFactor="1.5" ElementType="ListItem" FullSelectorArgument="&lt;wnd title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='Hyland Unity Client [ProdJCCSSO]' role='list item' text='Hyland Unity Client [ProdJCCSSO]' /&gt;" Guid="04ef4f6d-41b8-4304-85ba-de35352d76a4" InformativeScreenshot="b40ee724301d9b11306e8ee107a0b766.png" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 1920, 1080" FilePath="C:\Windows\explorer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAW4SURBVGhD7ZjdT5N3HMW5383+hF1t00Xnu8I0IiClCCJQeXeaLduyZUt2s8tdLNnMsrjp3sy2LNnFLpbsblEEKoLQQqGltLxLVERLcSi0CkhbKc/Z9zz8OpWnlSiUSNKTnPBYzu+cz+/BcEFaSimllFJKq6bRP9KOiINirMCnxS+ryrWVDK8UPmaPeIuqXTstgVip+TJOqOq10cjvaVgt/3shHQujp4AbX6yOR78C/L8FMVWXqXCNGj6bhtVwsP0dGf0SGP5k9X3rdFDhGjVwJg3P66GfX8LoX5sQGjoJXP1Mxj5OjtkNxP8lgZHPsWIPf5R0K1yjcOVDrAcrXKNw5QMJvPhWuEZh6H2sBytcozD0ngRefCtcozD4LtaDFa5RGJTf3+vACtcoDJ6QwDIeeNLaCr20L+7mEitcozBwXEqM1vrf1r1A9z1yVPexlbn32KNOtRHbi8dCK1yjMHBMAo+s9Uu5ONpXI0M1mBc/7KlBxFuNsKcaof9dhVC3fH0Wx86J2cXOhz3V+gbNTW6TYSmXwjUK/TWIWWNBbzWiUvrQKyPdlZhzV+JBVwVmXRWYdpZjurMc9+mO57Q6z54Z6WM3N7jFzajsk4Esj7MpXKPQXyWBKjlQJQcrMd9TiYiHpeUCXSajRxFot2CqzYK79lLcsYlbSzHxnOZZdrBrUjrZzY0ZZ5m+yW0yLPQuMsX4FK5R6KsErfVWyJuvQKS7HHNdZfKGLBh1fIpfGm04/rcPpX/eTIrZ/eMlN27I1nSHRd+OeMp1FjJpik/hGoW+xeBCTznmvWUIdcnb6CxFoK0E3za4kHH2+pr4+/oWTNlLZNuCkPuozkImspFR4RqFvjIJlcmNj8rbt+CBqxT3HMW401Kkv6F4Y8kwtyZaLfo2GchCJrKRUeEahV4JSTDqtSDiLsFsZzGCbUW43VSAzF9H4o4ly/4m2bYX6QxkIZPWYwEZFa5R6C2VUKmES+RQsfwIixCwH8Z406G4I8n02MV8fZsMZCET2ciocI1Cj4QkGPUUI9xVhBnHYQRsBRhvNMcdSaZ9VrO+TQaykEnzFoOMCtco9ByR0BHMdxch7JLbOwql5BD8jXlxR5JpnzVP3yYDWchENjIqXKPglZCnSMJya2ehHD6EQKsZ/oumuCMxXz2Xg2vnc3C9NgcjtQcxcmHRN5Rj/+b3rouZ5Zl4XTH7rLn6NhnCrkKdiWxkVLhGwcuQ3NYtt3bK7dvl/2FrnlwgV0qvJfRoXQ7GJTPRZMLkZXlzciZoM+OefdF85meTLXmYaDbp2Zv1vED8PtpnPaifIQNZyKR5CuUCh592gQIJFUhYbu3Ml8OEMckFcpD+03BC36rPFngOmjDdloe5DjNCnWa9g+YzP2Nf0GbSs2PWp3f6GrL1Pp5hB5nIRkaFaxQ8EuqW23bJcKfcvs2EQEsu/NZs7PlhMKF99Vm423wQ92y5eODIQ8Rplg4zou583XzmZ3MdebhvN+nZMQGM1xWzryFL3yYDWcikdeeDjArXKLhzoHXlYN6VjXBHFmbsBxBo3g9/wz7sOdOX0L66fZhs2o/7rZkIObIw78zGgnSwi+YzP+P3ZmwH9Ky/fvlObpOBLGRiFxkVrlFw7YXm3Itox1sIt2VgpiUdgUt7MF63C7u/8ya0r3YnJht3Y/pyOkL2DMzLea1zsUu3PPOzWCez/gvLd3KbeZ4jE7vICGfGKwr5SaFje1BzbEe0fRsitm2Ybd6KwMUtGK/djF2n3Ak9dm4zpqxvYrppK8Kt2/Tz7JE+3Us7mR0/v3wnt5nnucc6E/9pEY5NmVrbG8GofSMiLRsx27QBQevruH3+Nez8xpnQ/n9eRaDhdcxc2oDw5Q3geekB2hfN58c7mb19bvlObjPPc6ozqLVvSvzH3adpx9cOJLKKPLPidcWsIqunHSftSGQVeWbF64pZRVJKKaWUXmilpf0H4j6PzDKh3aMAAAAASUVORK5CYII=" InformativeScreenshot="3c0c72402bb6c89ac7dcbeb4fed7d1b8.png" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;" Title="Program Manager" Version="V1" />
+                      </uix:NApplicationCard.TargetApp>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NApplicationCard>
+                    <Assign sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Assign_71">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[in_obFilePath]</OutArgument>
                       </Assign.To>
@@ -418,20 +453,20 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="388,132" sap2010:WorkflowViewState.IdRef="Delay_3" />
-              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: OnBase (Prod-JCC-IDP)" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="NApplicationCard_64" OpenMode="Never" ScopeGuid="9299572f-05cb-4810-b8d3-a8bbfcd3b2d5" Version="V2" WindowResize="Maximize">
+              <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="546,132" sap2010:WorkflowViewState.IdRef="Delay_3" />
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: OnBase (Prod-JCC-IDP)" sap:VirtualizedContainerService.HintSize="546,94" sap2010:WorkflowViewState.IdRef="NApplicationCard_64" OpenMode="Never" ScopeGuid="9299572f-05cb-4810-b8d3-a8bbfcd3b2d5" Version="V2" WindowResize="Maximize">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="Sequence_1041">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,166.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1041">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="GetActiveWindow_2">
+                      <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="354,79.33333333333333" sap2010:WorkflowViewState.IdRef="GetActiveWindow_2">
                         <ui:GetActiveWindow.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -466,7 +501,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NApplicationCard>
-              <TryCatch DisplayName="Try Catch - Onbase Launch Home page" sap:VirtualizedContainerService.HintSize="388,76.66666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+              <TryCatch DisplayName="Try Catch - Onbase Launch Home page" sap:VirtualizedContainerService.HintSize="546,76.66666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1174,7 +1209,7 @@
                                 <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Adding Transaction items to queue" sap:VirtualizedContainerService.HintSize="1038,10110.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1113">
+                            <Sequence DisplayName="Adding Transaction items to queue" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1113">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
