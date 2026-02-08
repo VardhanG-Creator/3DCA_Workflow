@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,5537.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,6718</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Document_Validation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -143,7 +143,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Document_Validation" sap:VirtualizedContainerService.HintSize="884.6666666666666,5472.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence DisplayName="Document_Validation" sap:VirtualizedContainerService.HintSize="884.6666666666666,6653.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bln_HeaderExist" />
       <Variable x:TypeArguments="x:String" Name="str_HeadersMissing" />
@@ -163,7 +163,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="822.6666666666666,5384.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="822.6666666666666,6565.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -171,7 +171,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Document_Validation" sap:VirtualizedContainerService.HintSize="784,5076" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="Document_Validation" sap:VirtualizedContainerService.HintSize="784,6256.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="si:FileInfo" Name="File_Object" />
             <Variable x:TypeArguments="x:Int32" Name="Int_Count" />
@@ -184,7 +184,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="722,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Document Validation workflow started.&quot;]" />
-          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each File" sap:VirtualizedContainerService.HintSize="722,94" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[Directory.GetFiles(In_PDFInputFile,&quot;*.pdf&quot;)]">
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each File" sap:VirtualizedContainerService.HintSize="722,888" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[Directory.GetFiles(In_PDFInputFile,&quot;*.pdf&quot;)]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:String">
                 <ActivityAction.Argument>
@@ -196,7 +196,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[Path.GetFileName(File).Contains(in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="530,647.3333333333334" sap2010:WorkflowViewState.IdRef="If_15">
+                  <If Condition="[Path.GetFileName(File.ToLower).Contains(in_TransactionItem.SpecificContent(&quot;Case Number&quot;).ToString.ToLower) and (Path.GetFileName(File.ToLower).Contains(in_TransactionItem.SpecificContent(&quot;Document Type&quot;).ToString.ToLower.Replace(&quot;'&quot;,&quot; &quot;).Replace(&quot;brief - &quot;,&quot;&quot;).Replace(&quot;brief&quot;,&quot;&quot;)) or Path.GetFileName(File.ToLower).Contains(in_TransactionItem.SpecificContent(&quot;Document Type&quot;).ToString.ToLower.Replace(&quot;'&quot;,&quot;&quot;).Replace(&quot;brief - &quot;,&quot;&quot;).Replace(&quot;brief&quot;,&quot;&quot;)) or Path.GetFileName(File.ToLower).Contains(in_TransactionItem.SpecificContent(&quot;DocType ShortName&quot;).ToString.ToLower))]" sap:VirtualizedContainerService.HintSize="530,647.3333333333334" sap2010:WorkflowViewState.IdRef="If_15">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -244,15 +244,15 @@
             </ui:ForEach.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEach>
-          <If Condition="[bool_InputFileExists=True]" DisplayName="Throw if Input Pdf file is missing" sap:VirtualizedContainerService.HintSize="722,94" sap2010:WorkflowViewState.IdRef="If_13">
+          <If Condition="[bool_InputFileExists=True]" DisplayName="Throw if Input Pdf file is missing" sap:VirtualizedContainerService.HintSize="722,480.6666666666667" sap2010:WorkflowViewState.IdRef="If_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
